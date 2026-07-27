@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: >-
+  If you use cTSEMO, cite this software release and the Bradford et al.
+  TSEMO article identified in the preferred citation.
+title: cTSEMO
+abstract: >-
+  A minimal sequential two-objective MATLAB extension of TSEMO for expensive
+  problems observed through two objectives and one aggregate binary
+  feasibility label.
+type: software
+authors:
+  - name: cTSEMO contributors
+version: 0.1.0
+date-released: 2026-07-24
+license: BSD-2-Clause
+keywords:
+  - Bayesian optimization
+  - constrained optimization
+  - multiobjective optimization
+  - Thompson sampling
+  - binary feasibility
+  - MATLAB
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Bradford
+      given-names: Eric
+    - family-names: Schweidtmann
+      given-names: Artur M.
+    - family-names: Lapkin
+      given-names: Alexei A.
+  title: >-
+    Efficient multiobjective optimization employing Gaussian processes,
+    spectral sampling and a genetic algorithm
+  journal: Journal of Global Optimization
+  year: 2018
+  volume: 71
+  issue: 2
+  start: 407
+  end: 438
+  doi: 10.1007/s10898-018-0609-2

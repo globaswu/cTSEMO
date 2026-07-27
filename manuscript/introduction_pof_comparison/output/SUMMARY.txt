@@ -1,0 +1,55 @@
+Introduction PoF comparison
+Script: manuscript/introduction_pof_comparison/run_introduction_pof_comparison.m
+
+Fixed random seed: 20260728
+Training observations: 40
+Feasible observations: 22
+Violating observations: 18
+
+Constraint-wise product GP alone receives continuous constraint margins. Every other method receives only the common aggregate binary labels. The analytic boundary is displayed only for diagnostics and is not used to tune any field.
+
+GPC length scale: 0.35
+GPC signal standard deviation: 3.5
+GPC negative log evidence: 17.521776
+Weighted kNN bandwidth: 0.26827769
+cTSEMO raw targets: -0.25, 1.25
+cTSEMO prior mean: 0.5
+cTSEMO maximum clipped anchor error before snap: 0
+
+Constraint-wise GP product
+  range: 1.2638472e-164 to 1
+  maximum anchor error: 0.35081073
+  AUC on dense analytic grid: 0.99994294
+  Brier score on dense analytic grid: 0.0096503795
+Bernoulli GP classification
+  range: 0.10666919 to 0.92486458
+  maximum anchor error: 0.48619191
+  AUC on dense analytic grid: 0.99519031
+  Brier score on dense analytic grid: 0.067712223
+Probabilistic RBF SVM
+  range: 0.0001856715 to 0.99980229
+  maximum anchor error: 0.79033939
+  AUC on dense analytic grid: 0.99394373
+  Brier score on dense analytic grid: 0.031290351
+Random-forest vote fraction
+  range: 0.0081448413 to 1
+  maximum anchor error: 0.63141468
+  AUC on dense analytic grid: 0.9702103
+  Brier score on dense analytic grid: 0.076911156
+Weighted 7-nearest neighbours
+  range: 0 to 1
+  maximum anchor error: 0.66581896
+  AUC on dense analytic grid: 0.98423591
+  Brier score on dense analytic grid: 0.080659042
+Neural-network ensemble
+  range: 0.05682198 to 0.98028771
+  maximum anchor error: 0.67414047
+  AUC on dense analytic grid: 0.96976993
+  Brier score on dense analytic grid: 0.093392086
+cTSEMO clipped GP mean
+  range: 0 to 1
+  maximum anchor error: 0
+  AUC on dense analytic grid: 0.97844312
+  Brier score on dense analytic grid: 0.053727517
+
+These single-design visual and scalar diagnostics are descriptive. They do not establish optimizer-level superiority.

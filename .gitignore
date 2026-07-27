@@ -1,0 +1,20 @@
+# MATLAB editor and build artifacts
+*.asv
+*.autosave
+*.mex*
+slprj/
+codegen/
+
+# Generated optimization and test outputs
+src/ctsemo-output/
+src/benchmark-results/
+src/diagnostic-artifacts/
+src/tests/ctsemo-output/
+studies/**/results/
+
+# Large regenerable MATLAB workspace from the Introduction comparison
+manuscript/introduction_pof_comparison/output/*.mat
+
+# Operating-system metadata
+Thumbs.db
+.DS_Store
