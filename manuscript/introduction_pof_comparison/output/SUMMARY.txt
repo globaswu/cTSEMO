@@ -6,7 +6,23 @@ Training observations: 40
 Feasible observations: 22
 Violating observations: 18
 
-Constraint-wise product GP alone receives continuous constraint margins. Every other method receives only the common aggregate binary labels. The analytic boundary is displayed only for diagnostics and is not used to tune any field.
+Constraint-wise product GP alone receives explicitly synthetic continuous margins. Their signs preserve every analytic per-constraint outcome and aggregate label; their magnitudes are randomly generated and are not values of the analytic functions. Every other method receives only the common aggregate binary labels. The analytic boundary is displayed only for diagnostics and is not used to tune any field.
+
+Synthetic-margin random seed: 20260731
+Synthetic-margin magnitude range: 0.05 to 0.2
+Constraint 1 GP length scale: 0.5
+Constraint 1 standardized observation/prediction noise SD: 0.6
+Constraint 1 Phi range on grid: 0.06143572980169135 to 0.9644614804509062
+Constraint 1 Phi range at observations: 0.06185825419081217 to 0.9592650834900298
+Constraint 2 GP length scale: 0.25
+Constraint 2 standardized observation/prediction noise SD: 0.6
+Constraint 2 Phi range on grid: 0.06585174859921442 to 0.9867851196785797
+Constraint 2 Phi range at observations: 0.0951394240201793 to 0.9819597923163579
+Individual Phi numerical endpoint count on grid: 0
+
+Product PoF range on grid: 0.009289509621797341 to 0.9251364063095052
+Product PoF median on grid: 0.5753320199648561
+Product PoF fraction above 0.95: 0
 
 GPC length scale: 0.35
 GPC signal standard deviation: 3.5
@@ -16,11 +32,11 @@ cTSEMO raw targets: -0.25, 1.25
 cTSEMO prior mean: 0.5
 cTSEMO maximum clipped anchor error before snap: 0
 
-Constraint-wise GP product
-  range: 1.2638472e-164 to 1
-  maximum anchor error: 0.35081073
-  AUC on dense analytic grid: 0.99994294
-  Brier score on dense analytic grid: 0.0096503795
+Constraint-wise GP product (synthetic margins)
+  range: 0.0092895096 to 0.92513641
+  maximum anchor error: 0.45787342
+  AUC on dense analytic grid: 0.99377719
+  Brier score on dense analytic grid: 0.061255711
 Bernoulli GP classification
   range: 0.10666919 to 0.92486458
   maximum anchor error: 0.48619191
