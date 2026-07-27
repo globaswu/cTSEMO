@@ -1,0 +1,2 @@
+PointsPerDimension,TotalPoints,GridPlacement,Threshold,MinimumP_i,MaximumP_i,MeanP_i,MedianP_i,FractionAtZero,FractionAtOne,TruthFeasibleFraction,PredictedFeasibleFraction,FalseFeasibleCount,FalseInfeasibleCount,CorrectCount,Ordering
+50,6250000,cellCenters,0.5,0,1,0.360195033689055,0.161594985457791,0.32157152,0.1876184,0.33896928,0.33378144,259091,291515,5699394,"Descending clipped p_i; exact ties use ascending four-dimensional tensor linear index. Ranked points are assigned to increasing row-plus-column diagonals, then increasing row. Truth is not used."

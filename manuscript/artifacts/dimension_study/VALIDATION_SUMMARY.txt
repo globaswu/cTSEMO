@@ -1,0 +1,4 @@
+Matched dimension PoF study validation
+Passed: 24/24 checks
+Failed: 0
+Validation status: true

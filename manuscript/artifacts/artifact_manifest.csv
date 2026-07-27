@@ -1,0 +1,73 @@
+RelativePath,Category,Bytes,IntendedRole,RetentionStatus
+artifacts/README.md,index,4532,artifact index documentation or maintenance code,retain during manuscript drafting
+artifacts/competitors/weldbeam_150_all_solver_summary.csv,competitors,1931,source index for the unmatched competitor pilot,retain during manuscript drafting
+artifacts/diagnostics/bnh_zero_initial_feasibility_recovery.csv,diagnostics,863,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/campaign_feasibility_history.csv,diagnostics,15591,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/campaign_final_pareto_summary.csv,diagnostics,151,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/campaign_fixed_reference_hypervolume_history.csv,diagnostics,27577,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/campaign_run_summary.csv,diagnostics,1324,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/campaign_selection_source_counts.csv,diagnostics,354,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/campaign_solver_options.json,diagnostics,10965,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/campaign_source_paths.csv,diagnostics,7222,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/cossin2_independent_grid_pof.csv,diagnostics,2692199,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/cossin2_pof_confusion.csv,diagnostics,104,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/cossin2_pof_metrics.csv,diagnostics,357,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/cossin2_pof_reliability.csv,diagnostics,580,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/cossin2_pof_roc.csv,diagnostics,276845,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/weldedbeam_50x4_pof_confusion.csv,diagnostics,112,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/weldedbeam_50x4_pof_metrics.csv,diagnostics,363,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/weldedbeam_50x4_pof_reliability.csv,diagnostics,602,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/weldedbeam_50x4_pof_roc.csv,diagnostics,332294,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/weldedbeam_sorted_pof_raster_summary.csv,diagnostics,565,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/weldedbeam_unmatched_competitor_file_metrics.csv,diagnostics,948,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/diagnostics/weldedbeam_unmatched_competitor_sources.csv,diagnostics,1371,compact source data for manuscript figures and diagnostics,retain during manuscript drafting
+artifacts/dimension_study/FINDINGS.md,dimension_study,6273,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/INCLUSION_DECISIONS.md,dimension_study,3589,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/VALIDATION_SUMMARY.txt,dimension_study,94,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/d4_representative_runs.csv,dimension_study,3486,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/dimension_trend_paired_summary.csv,dimension_study,9932,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/dimension_trend_problem_method_medians.csv,dimension_study,4880,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/field_metrics.csv,dimension_study,39308,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/manuscript_figure_manifest.csv,dimension_study,2081,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/paired_aggregate_summary.csv,dimension_study,14526,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/run_summary.csv,dimension_study,25979,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/source_manifest.csv,dimension_study,9482,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/source_manifest_summary.json,dimension_study,701,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/study_manifest.json,dimension_study,1343,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/dimension_study/validation_checks.csv,dimension_study,1643,fixed-budget dimensional-study evidence and validation,retain during manuscript drafting
+artifacts/release_campaign/campaign_manifest.json,release_campaign,17442,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/campaign_summary.csv,release_campaign,4447,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/release_source_manifest.csv,release_campaign,9411,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/release_source_manifest.json,release_campaign,17410,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/release_source_manifest.sha256,release_campaign,94,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/runs/BNH_STRESS_result.mat,release_campaign,39439,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/runs/BNH_result.mat,release_campaign,57192,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/runs/C2DTLZ2_result.mat,release_campaign,86036,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/runs/COSSIN1_result.mat,release_campaign,57831,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/runs/COSSIN2_result.mat,release_campaign,6275402,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/runs/SRN_result.mat,release_campaign,57669,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/release_campaign/runs/WELDEDBEAM_result.mat,release_campaign,256494,sealed campaign summaries manifests and final run records,retain during manuscript drafting
+artifacts/sanitize_artifact_paths.m,index,2314,artifact index documentation or maintenance code,retain during manuscript drafting
+artifacts/sensitivity/profile_sensitivity_summary.csv,sensitivity,868,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/profile_sensitivity_summary.mat,sensitivity,2669,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/release_source_manifest.csv,sensitivity,9411,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/release_source_manifest.json,sensitivity,17410,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/release_source_manifest.mat,sensitivity,11951,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/release_source_manifest.sha256,sensitivity,94,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/shared_initial_design.mat,sensitivity,1477,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/study_manifest.json,sensitivity,2620,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/sensitivity/study_manifest.mat,sensitivity,2153,matched computational-profile sensitivity evidence,retain during manuscript drafting
+artifacts/tests/TEST_SUMMARY.md,tests,1037,human-readable and machine-readable release test evidence,retain during manuscript drafting
+artifacts/tests/test-results.xml,tests,11405,human-readable and machine-readable release test evidence,retain during manuscript drafting
+artifacts/update_artifact_manifest.m,index,3209,artifact index documentation or maintenance code,retain during manuscript drafting
+introduction_pof_comparison/README.md,introduction_pof_comparison,1871,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/SUMMARY.txt,introduction_pof_comparison,3053,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/gpc_ctsemo_pof_comparison.pdf,introduction_pof_comparison,65654,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/gpc_ctsemo_pof_comparison.png,introduction_pof_comparison,311414,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/pof_comparison_data.mat,introduction_pof_comparison,8060730,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/pof_field_metrics.csv,introduction_pof_comparison,1138,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/synthetic_constraint_margins.csv,introduction_pof_comparison,6886,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/table1_pof_atlas.pdf,introduction_pof_comparison,125248,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/output/table1_pof_atlas.png,introduction_pof_comparison,683495,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/reproduce_introduction_pof_figures.m,introduction_pof_comparison,4323,executable Introduction PoF reproduction data and figures,retain during manuscript drafting
+introduction_pof_comparison/run_introduction_pof_comparison.m,introduction_pof_comparison,30817,executable Introduction PoF reproduction data and figures,retain during manuscript drafting

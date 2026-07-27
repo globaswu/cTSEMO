@@ -1,0 +1,19 @@
+{
+  "SchemaVersion": 1,
+  "Algorithm": "SHA-256",
+  "ManifestFile": "source_manifest.csv",
+  "ManifestSHA256": "d43f3d619ac351414ed53610ffe4fd2422719db7b6c3bb1d7ab0d147a5d1f257",
+  "SummaryFile": "source_manifest_summary.json",
+  "FileCount": 70,
+  "ReleaseMFileCount": 66,
+  "StudyScriptCount": 4,
+  "ReleaseRoot": "cTSEMO-release",
+  "StudyScripts": [
+    "run_matched_dimension_pof_study_20260726.m",
+    "launch_full_study.m",
+    "plot_matched_dimension_pof_study_20260726.m",
+    "validate_matched_dimension_pof_study_20260726.m"
+  ],
+  "Ordering": "Case-insensitive ascending repository-relative path",
+  "AuthorityStatement": "ManifestSHA256 identifies the exact source_manifest.csv bytes."
+}

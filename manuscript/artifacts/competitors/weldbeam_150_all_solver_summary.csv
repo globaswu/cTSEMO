@@ -1,0 +1,10 @@
+Solver,Group,EvaluationBudget,FeasibleCount,FeasibleRate,ParetoPointCount,FixedReferenceHypervolume,NormalizedFixedReferenceHypervolume,Source
+BoTorch (150),Competitor,150,94,0.626666666667,16,22.6157925288883,0.979206435348584,${PROJECT_ROOT}/competitors\botorch\testprob\native_results\botorch_native_welded_20260701_093401\pareto_front.csv
+Trieste (150),Competitor,150,121,0.806666666667,18,22.5976895979953,0.978422624371961,${PROJECT_ROOT}/competitors\trieste\testprob\native_results\trieste_native_welded_20260701_111913\pareto_front.csv
+Support-aware PoF,cTSEMO,150,107,0.713333333333333,17,22.5553897885762,0.976591149947872,${PROJECT_ROOT}/cTSEMO-support-aware\outputs\20260719_075924\weldbeam_150_pareto_front.csv
+USeMOC (150),Competitor,150,106,0.706666666667,15,22.5325421693832,0.975601906006161,${PROJECT_ROOT}/competitors\usemoc\testprob\native_results\usemoc_native_welded_20260701_085416\pareto_front.csv
+Production baseline,cTSEMO,150,71,0.473333333333333,20,22.529720975719,0.975479755478478,${LEGACY_TSEMO_ROOT}/outputs\final_pof_weldbeam_150_20260718\20260718_021523\weldbeam_final_pof_150_pareto_front.csv
+COMBOO (150),Competitor,150,37,0.246666666667,12,22.4995616239241,0.974173932066553,${PROJECT_ROOT}/competitors\comboo\testprob\native_results\comboo_native_welded_20260701_115105\pareto_front.csv
+Structured-kernel PoF,cTSEMO,150,112,0.746666666666667,20,22.2204366026057,0.962088526843956,${PROJECT_ROOT}/cTSEMO-structured-kernel\outputs\20260719_101614\weldbeam_150_pareto_front.csv
+PPESMOC (150),Competitor,150,35,0.233333333333,6,22.1966902333506,0.961060369304879,${PROJECT_ROOT}/competitors\ppesmoc\testprob\native_results\ppesmoc_native_welded_initial20_evalexact_20260701_145500\evaluations_raw.csv
+PAC-MOO (150),Competitor,150,150,1,18,21.8155577536348,0.94455829994864,${PROJECT_ROOT}/competitors\pac-moo\testprob\native_results\pacmoo_native_welded_20260701_090625\pareto_front.csv

@@ -1,10 +1,17 @@
 # Introduction PoF comparison
 
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=globaswu/cTSEMO&file=manuscript/introduction_pof_comparison/reproduce_introduction_pof_figures.m)
+
 `run_introduction_pof_comparison.m` generates both feasibility-field figures
 used in the manuscript Introduction:
 
 1. the six-method reference atlas; and
 2. the Bernoulli GP-classification versus cTSEMO clipped GP-mean comparison.
+
+For the shortest reproduction path, select the **Open in MATLAB Online**
+button above and run `reproduce_introduction_pof_figures.m`. The entry point
+regenerates Figures 1 and 2, checks all 40 pointwise margin and probability
+records, and displays both verified figures.
 
 From the repository root, run:
 
