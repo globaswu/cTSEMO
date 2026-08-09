@@ -1,6 +1,6 @@
 # cTSEMO notice
 
-cTSEMO version 0.1.0 is an initial research release for sequential constrained
+cTSEMO version 0.2.0 is a research release for sequential constrained
 two-objective Bayesian optimization with aggregate binary feasibility labels.
 
 The implementation is a derivative extension of the MATLAB TSEMO algorithm by

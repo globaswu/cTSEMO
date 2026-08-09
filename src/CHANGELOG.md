@@ -2,6 +2,22 @@
 
 All notable changes to cTSEMO are documented in this file.
 
+## [0.2.0] - 2026-08-09
+
+### Changed
+
+- Replaced default finite-primary selection with bounded genetic-algorithm
+  maximization of the scalar cTSEMO acquisition.
+- Retained the deterministic Latin-hypercube/corner primary design as the GA
+  seed and acquisition-reference set.
+- Kept an independently seeded Latin-hypercube challenger as a coverage check;
+  the final proposals are compared using the same Thompson draws, PoF, masks,
+  and frozen acquisition background.
+- Kept Phase-I feasibility discovery and low-acquisition recovery separate
+  from ordinary GA-primary/challenger arbitration.
+- Added primary-search diagnostics, deterministic random-stream separation,
+  and an explicit finite-pool ablation or GA-failure policy.
+
 ## [0.1.0] - 2026-07-24
 
 Initial research release.

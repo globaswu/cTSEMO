@@ -45,6 +45,18 @@ classdef AcquisitionAndFallbackTest < matlab.unittest.TestCase
             testCase.verifyTrue(requiresFallback);
         end
 
+        function testFixedEpsilonScoresZeroHviBatchButRequestsFallback( ...
+                testCase)
+            [score, epsilon, reason, requiresFallback] = ...
+                AcquisitionAndFallbackTest.fixedEpsilonZeroHvi();
+
+            testCase.verifyEqual(score, [0.1; 0.16], ...
+                AbsTol=1.0e-12);
+            testCase.verifyEqual(epsilon, 0.2, AbsTol=eps);
+            testCase.verifyEqual(reason, "no_positive_hvi");
+            testCase.verifyTrue(requiresFallback);
+        end
+
         function testDisabledSoftMasksReturnOnes(testCase)
             [designMask, codomainMask] = ...
                 AcquisitionAndFallbackTest.disabledMaskValues();
@@ -169,6 +181,26 @@ classdef AcquisitionAndFallbackTest < matlab.unittest.TestCase
                 candidateObjectives, feasibleObjectives, [5, 5]);
             reason = info.reason;
             requiresFallback = info.requiresFallback;
+        end
+
+        function [score, epsilon, reason, requiresFallback] = ...
+                fixedEpsilonZeroHvi()
+            Xcandidate = [0.2, 0.2; 0.8, 0.8];
+            Ycandidate = [3, 3; 4.5, 4.5];
+            p_i = [0.5; 0.8];
+            feasibleObjectives = [1, 4; 2, 2; 4, 1];
+            options = cTSEMOOptions(struct( ...
+                "acquisition", struct( ...
+                    "epsilon", 0.2, "backgroundScale", 0), ...
+                "masks", struct( ...
+                    "design", struct("enabled", false), ...
+                    "codomain", struct("enabled", false))));
+            [score, components, status] = ctsemo.scoreCandidates( ...
+                Xcandidate, Ycandidate, p_i, feasibleObjectives, ...
+                [5, 5], [0, 0], [4.5, 4.5], options);
+            epsilon = components.epsilon;
+            reason = status.reason;
+            requiresFallback = status.requiresFallback;
         end
 
         function [designMask, codomainMask] = disabledMaskValues()

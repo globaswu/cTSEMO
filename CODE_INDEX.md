@@ -27,7 +27,8 @@ timestamp-free MATLAB paths.
 | Thompson-sampled hypervolume improvement | `src/+ctsemo/sampledHVI.m` |
 | PoF weighting and final candidate scores | `src/+ctsemo/scoreCandidates.m` |
 | Design- and objective-space masks | `src/+ctsemo/crowdingMasks.m` |
-| Primary and challenger candidate pools | `src/+ctsemo/makeCandidatePools.m` |
+| Primary GA seed and challenger designs | `src/+ctsemo/makeCandidatePools.m` |
+| Bounded primary acquisition maximization | `src/+ctsemo/optimizePrimaryGA.m` |
 | Feasibility-discovery and recovery selection | `src/+ctsemo/selectFallback.m` |
 
 ## Manuscript figures

@@ -10,7 +10,7 @@ published by Bradford, Schweidtmann, and Lapkin. It is intended for expensive
 black-box problems for which an evaluation returns two objective values and
 one aggregate binary feasibility label.
 
-This is version 0.1.0, the initial research release. The implementation is
+This is version 0.2.0, the current research release. The implementation is
 provided for reproducible research and method development. Its verified scope
 is deliberately narrow:
 
@@ -42,7 +42,9 @@ feasibility response:
 - an exact clipped Gaussian-process feasibility field;
 - a locally variable length-scale option with a stationary fallback;
 - design-space and objective-space anti-clustering masks;
-- a separately seeded finite challenger pool evaluated with the same
+- bounded genetic-algorithm maximization of the scalar acquisition,
+  initialized from a deterministic Latin-hypercube/corner seed design;
+- a separately seeded finite LHS challenger evaluated with the same
   acquisition;
 - a feasibility-discovery state for an initial design containing no feasible
   observations;
@@ -114,20 +116,17 @@ where \(M_X\) and \(M_Y\) are bounded anti-clustering masks. The quantity is
 sampled HVI, not expected HVI. The exponent is configured by
 `options.acquisition.pofPower`; its release default is \(\alpha=1\).
 
-The release evaluates this acquisition on two deterministic finite candidate
-pools:
-
-- a primary Latin-hypercube pool, augmented with hyperrectangle corners when
-  enabled and dimensionally permitted; and
-- a separately seeded Latin-hypercube challenger pool.
-
-Every candidate in both pools is scored before the primary and challenger
-maxima are compared. This complete-pool policy avoids a multiple-comparisons
-imbalance caused by Pareto-filtering only the primary pool. The challenger is
-therefore a finite-search safeguard, not a different scientific acquisition.
-Set `options.challengers.scoreCompletePools=false` only to reproduce the
-legacy primary-only Pareto-filtering policy for an ablation. The release does
-not continuously optimize or locally refine the acquisition.
+The release first scores a deterministic primary Latin-hypercube/corner seed
+design and an independently seeded Latin-hypercube challenger. The empirical
+HVI background is fixed from those reference designs. A bounded genetic
+algorithm, initialized from the highest-scoring primary seeds, then maximizes
+the resulting pointwise scalar acquisition over the normalized design domain.
+The retained GA proposal and complete challenger are rescored with the same
+Thompson draws, PoF, masks, and fixed background before their maxima are
+compared. The challenger is therefore a coverage check on the same scientific
+acquisition, not a second acquisition function or a source-specific bonus.
+Set `options.primarySearch.method="pool"` only for an explicit finite-primary
+ablation. The default GA search requires Global Optimization Toolbox.
 
 ### No feasible point in the initial design
 
@@ -143,16 +142,17 @@ S_{\mathrm{I}}(\mathbf{x}) =
 \]
 
 where the release defaults are \(p_{\mathrm{floor}}=0.60\) and \(s_d=0.10\)
-in normalized design coordinates. When \(p_i\) is zero throughout the pool,
+in normalized design coordinates. When \(p_i\) is zero throughout the
+reference designs,
 this is monotone in distance to the nearest evaluated point and therefore
-reduces to finite-pool maximin exploration. It does not fabricate a Pareto
+reduces to finite-design maximin exploration. It does not fabricate a Pareto
 front from infeasible observations. The transition to ordinary sampled-HVI
 selection occurs after the first feasible evaluation.
 
 ### Other fallbacks
 
-If sampled HVI is zero throughout the finite pools, the acquisition is
-nonfinite, or no valid candidate remains after duplicate exclusion, cTSEMO
+If sampled HVI is zero throughout the acquisition-reference designs, the
+acquisition is nonfinite, or no valid candidate remains after duplicate exclusion, cTSEMO
 uses an explicitly logged recovery path. Recovery prioritizes design-space
 coverage and the available clipped feasibility field without being reported
 as HVI. An absent or invalid pool requests candidate regeneration. A zero
@@ -175,7 +175,8 @@ proposals. A run record should preserve:
 - objective and feasibility-model settings;
 - random seeds;
 - sampled HVI, \(p_i\), masks, final acquisition, and fallback score;
-- primary and challenger pool maxima and their acquisition values;
+- primary seed maximum, GA diagnostics, and final primary and challenger
+  acquisition values;
 - the final selection source and fallback reason;
 - feasible Pareto set and hypervolume history; and
 - MATLAB release, toolbox versions, release version, vendored Bradford
@@ -245,9 +246,9 @@ in `tests/`. Refer to the MATLAB help text for the exact option schema and
 label-encoding contract.
 
 The development and verification environment for this release is MATLAB
-R2025b. The minimum compatible MATLAB release is not established in the
-available evidence. Users should run the bundled tests in their own
-environment before relying on a result.
+R2025b with Global Optimization Toolbox. The minimum compatible MATLAB release
+is not established in the available evidence. Users should run the bundled
+tests in their own environment before relying on a result.
 
 The vendored Bradford provenance snapshot intentionally excludes the original
 DIRECT, NGPM, and MEX directories. See `THIRD_PARTY_NOTICES.md`.

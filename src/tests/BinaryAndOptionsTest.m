@@ -96,6 +96,21 @@ classdef BinaryAndOptionsTest < matlab.unittest.TestCase
                 options.challengers.scoreCompletePools);
         end
 
+        function testGaIsShippedPrimarySearchDefault(testCase)
+            options = cTSEMOOptions();
+
+            testCase.verifyEqual(options.primarySearch.method, "ga");
+            testCase.verifyFalse(options.primarySearch.useParallel);
+            testCase.verifyEqual(options.primarySearch.failurePolicy, ...
+                "error");
+        end
+
+        function testGaEliteCountMustBeSmallerThanPopulation(testCase)
+            testCase.verifyError( ...
+                BinaryAndOptionsTest.invalidGaEliteCountCall(), ...
+                "cTSEMO:Options:InvalidGAEliteCount");
+        end
+
         function testLegacyChallengerAblationCanBeRequested(testCase)
             options = cTSEMOOptions(struct( ...
                 "challengers", struct( ...
@@ -242,6 +257,12 @@ classdef BinaryAndOptionsTest < matlab.unittest.TestCase
             call = @() cTSEMOOptions(struct( ...
                 "challengers", struct( ...
                     "scoreCompletePools", 1)));
+        end
+
+        function call = invalidGaEliteCountCall()
+            call = @() cTSEMOOptions(struct( ...
+                "primarySearch", struct( ...
+                    "populationSize", 8, "eliteCount", 8)));
         end
 
         function call = unknownNestedOptionCall()

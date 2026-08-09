@@ -25,6 +25,21 @@ options = cTSEMOOptions();
 result = cTSEMO(f, g, X0, Y0, C0, lb, ub, options);
 ```
 
+For an ordinary iteration with at least one feasible observation, the default
+candidate-search workflow is:
+
+1. generate a deterministic Latin-hypercube primary seed set, augmented by
+   eligible hyperrectangle corners;
+2. maximize the scalar cTSEMO acquisition over the bounded normalized domain
+   with a genetic algorithm initialized from the best primary seeds;
+3. score an independently seeded Latin-hypercube challenger with exactly the
+   same Thompson draw, PoF, masks, and fixed acquisition background; and
+4. select the higher-scoring nonduplicate point from the GA primary proposal
+   and the challenger.
+
+Feasibility-discovery and low-acquisition recovery remain separate from this
+ordinary primary--challenger arbitration.
+
 To reproduce the Introduction feasibility-field figures:
 
 ```matlab
@@ -56,6 +71,9 @@ The recorded development and verification environment is MATLAB R2025b. The
 minimum compatible MATLAB release was not established. The Introduction
 comparison uses Statistics and Machine Learning Toolbox functions including
 `lhsdesign`, `fitcsvm`, `fitPosterior`, `fitcensemble`, and `fitcnet`.
+The default primary acquisition search additionally requires Global
+Optimization Toolbox for `ga`. A finite primary-pool mode is retained as an
+explicit ablation or declared GA-failure policy; it is not the default.
 
 Run the bundled tests in the local MATLAB environment before relying on new
 results.

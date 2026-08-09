@@ -18,8 +18,8 @@ The suite covers:
   caller random-stream restoration, and base-MATLAB spectral-quantile
   equivalence;
 - Pareto utilities, exact two-objective hypervolume, sampled HVI,
-  anti-clustering masks, complete-pool same-acquisition challenger
-  arbitration, hard
+  anti-clustering masks, bounded GA primary search seeded from the primary
+  design, same-acquisition LHS challenger arbitration, hard
   duplicate exclusion, configurable PoF powers, adaptive HVI background,
   and exhausted-pool fallback signaling;
 - deterministic benchmark initial designs, including an all-infeasible BNH
@@ -28,6 +28,7 @@ The suite covers:
   unconstrained solver runs, including reconstruction of stored sampled HVI
   and acquisition values.
 
-The end-to-end tests deliberately use small candidate pools and short
+The end-to-end tests deliberately use small seed/challenger designs, small GA
+populations, and short
 evaluation budgets. They are regression and liveness checks, not benchmark
 performance evidence.
