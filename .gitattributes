@@ -12,15 +12,18 @@
 
 # Preserve retained numerical evidence byte-for-byte. Several execution-time
 # source manifests hash the exact CSV/JSON payloads.
-manuscript/artifacts/**/*.csv -text
-manuscript/artifacts/**/*.json -text
-manuscript/artifacts/**/*.xml -text
-manuscript/artifacts/**/*.txt -text
-manuscript/artifacts/**/*.sha256 -text
-manuscript/introduction_pof_comparison/output/*.csv -text
-manuscript/introduction_pof_comparison/output/*.txt -text
+manuscript/artifacts/**/*.csv -text -eol
+manuscript/artifacts/**/*.json -text -eol
+manuscript/artifacts/**/*.xml -text -eol
+manuscript/artifacts/**/*.txt -text -eol
+manuscript/artifacts/**/*.md -text -eol
+manuscript/artifacts/**/*.sha256 -text -eol
+manuscript/introduction_pof_comparison/output/*.csv -text -eol
+manuscript/introduction_pof_comparison/output/*.txt -text -eol
+studies/hull_coverage/data/*.csv -text -eol
 manuscript/artifacts/** -whitespace
 manuscript/introduction_pof_comparison/output/** -whitespace
+studies/hull_coverage/data/*.csv -whitespace
 
 # Avoid further text conversion in third-party provenance files. Existing
 # snapshots may differ from upstream only by historical line-ending
