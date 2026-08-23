@@ -1,0 +1,422 @@
+[
+  {
+    "Category": "release",
+    "RelativePath": "setup_ctsemo.m",
+    "Bytes": 1434,
+    "SHA256": "ef489f2b986fe560fa749a615b4c4aeb042fd608b887c3088ec9b813381558ad"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/binaryLabels.m",
+    "Bytes": 1055,
+    "SHA256": "bbf88a1e4d43fe7d3aac84dfb560b693c29eb56bf26acb06e1ae17a376431b2c"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/componentSeed.m",
+    "Bytes": 1073,
+    "SHA256": "c8754b09521d491ec3a5bb30dee10415abed8684ee70cdefc684fd6599e6c702"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/crowdingMasks.m",
+    "Bytes": 7733,
+    "SHA256": "21f8d646610ddf9730f3b32b587c52e3572423af6d04a877239b796764c32c94"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/drawObjectiveTS.m",
+    "Bytes": 5461,
+    "SHA256": "ab80ef9a70de5e7c65e2fd033070116ff59e5afad48395433b6f9bf366b5e7db"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/evaluateObjectiveTS.m",
+    "Bytes": 2166,
+    "SHA256": "a7c41750e2b300b7fc36aa014def41122b5c796dd93e3ddc9cd1a47dc1a72d67"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/fitClippedBinaryPof.m",
+    "Bytes": 20369,
+    "SHA256": "d7f073ca234469ce105afbaca6d85850f3aa525df98760d2a6ebac61cf1f1c7e"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/fitObjectiveGP.m",
+    "Bytes": 16068,
+    "SHA256": "d212020e54ba7c6d5c6be4dfa6ace164afdea0a617b581160818b443dc23d800"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/hypervolume2d.m",
+    "Bytes": 2032,
+    "SHA256": "07173cbd23251f153c5ae4c07229b8cea438984dc8435f4bb7e295717628ccd9"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/localMatern32.m",
+    "Bytes": 2150,
+    "SHA256": "a1e8072aa7d5ec347d80133aee29678fa0f55b634f3a5ea7250d0bae67a301a2"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/makeCandidatePools.m",
+    "Bytes": 7411,
+    "SHA256": "f613077f70b30bf69a32a7721bf34f971434bebfefabc1aa701c2c38267f61e6"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/normalizeData.m",
+    "Bytes": 2854,
+    "SHA256": "c253e54f94582ef916ee5d9003a70687e1ca327105d6be67cb0f421721dcbf8d"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/optimizePrimaryGA.m",
+    "Bytes": 7451,
+    "SHA256": "efefdd61033386e2f42812b87690cefc43127c4b1c6a03f2a4a87053f21a3595"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/pareto2d.m",
+    "Bytes": 1473,
+    "SHA256": "a863e73b55f4ad46755f9b9fb1629af89dc708581b40bc91ea9f5deaa2eb8cff"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/predictClippedBinaryPof.m",
+    "Bytes": 4211,
+    "SHA256": "2a61b84a9310cd7e8ca1a16cdd40ee3d8950c0eace371ba534b2e430b95ced30"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/predictObjectiveGP.m",
+    "Bytes": 2352,
+    "SHA256": "9503ece7e77a3844c1c69a8b9339a611f1631d8596f5170849c7286368b0c5f2"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/run.m",
+    "Bytes": 46832,
+    "SHA256": "0a8d5a35908b7cb683716a592d33ce35614ebb4674e2c659465124885d583248"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/sampledHVI.m",
+    "Bytes": 3931,
+    "SHA256": "9bc8c38ac838832d7cc8b8ba43c4101c4509213d21d3a7f329138b81a2e482e2"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/saveCheckpoint.m",
+    "Bytes": 1575,
+    "SHA256": "3ffbc8b1ed05f2da72d43557179b3c1d340b3528e8788427abd6fba3424937e5"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/scopedRng.m",
+    "Bytes": 547,
+    "SHA256": "58895ae9f80f63b93ad4adc4994405dacbcd0d0241695bd1a24a1b38863f8396"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/scoreCandidates.m",
+    "Bytes": 6879,
+    "SHA256": "a460bba452274e126566646a13e34879e576e2d9fcfaf34fc1d0385d53005195"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/selectFallback.m",
+    "Bytes": 5639,
+    "SHA256": "e3fbed3886e65cbd817fc2b1954a7d9990594b2de841718c3dff757b3ed78716"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/updatePareto.m",
+    "Bytes": 3344,
+    "SHA256": "c753ba0c056528e0cb5fd0196bb74c88e97030988eee9819bed9eedaac131b80"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/+ctsemo/validateInputs.m",
+    "Bytes": 8400,
+    "SHA256": "b46afe7baa9a5d69ec2279a5f6739f0106bb216139058346d4068928bf153893"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/getBenchmarkProblem.m",
+    "Bytes": 18642,
+    "SHA256": "cecd529df96a477ce0967cc1ebf50f602d6941c16170162f209c27ea3e7e7bda"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/initialDesign.m",
+    "Bytes": 7076,
+    "SHA256": "3e1a1ad33da5fdfe6c9962c4fac3f5846ac1faee54a0ea4ab91e4a9eda48a761"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/provenance/bradford-test-functions/ttbuk1.m",
+    "Bytes": 108,
+    "SHA256": "23f4e8fc3b4108f7b69ef5b1d70ed641a120f9d7652291444a3702300bc87cb5"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/provenance/bradford-test-functions/ttbuk2.m",
+    "Bytes": 105,
+    "SHA256": "8694af6a90d65fa0a6c0fdbdcd96ecac9fcb9f952a07d77d4fc2365e86909ad0"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/provenance/bradford-test-functions/ttbukg1.m",
+    "Bytes": 114,
+    "SHA256": "78de93abf6fb6f1467e7d6b587e6fd5467f18b8023be73ca1c1850e11eb20c97"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/provenance/bradford-test-functions/ttbukg2.m",
+    "Bytes": 131,
+    "SHA256": "b08e7a9fd20836d09b579931b0cacb81cbd932368b675be82f25f7616bc5d19b"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/provenance/bradford-test-functions/weldbeam.m",
+    "Bytes": 267,
+    "SHA256": "ef07ab101e44413481ff74eed62143f75dd53cc426b9f302aee12a03202f48d7"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/provenance/bradford-test-functions/weldbeamconstr.m",
+    "Bytes": 579,
+    "SHA256": "69866dbd57d86b4993b5872b8ca94be1c8ddc61b21bf5dcf7576b6f34ef853c8"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/provenance/c2dtlz2_reference.m",
+    "Bytes": 764,
+    "SHA256": "61553c9bc53ab161abb27b7c5c30916a96fba3c0f10fc68527e3b715e4ddefdf"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/runHighDimensionalChallengerStudy.m",
+    "Bytes": 30209,
+    "SHA256": "ad0228fa3d85f880172ed1aefdee61ccad0c89bc79f18266cace2fd02d50b75e"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/runHighDimensionalChallengerStudyCampaign.m",
+    "Bytes": 1008,
+    "SHA256": "9ac96548f56493ed858fa823cf286f44fe716b82a7b921428499a007dbf97354"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/runReleaseBenchmarks.m",
+    "Bytes": 26312,
+    "SHA256": "3929b8d68427d51a5b046b22c03a1a72e3c0700fd1e979224974b92cd73b0540"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/runWeldedBeamProfileSensitivity.m",
+    "Bytes": 11750,
+    "SHA256": "9f8e80a5e693baa8a1dd2a08f7e97d21fbaf59beb05f6226b18844102861ffb9"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/sealReleaseSourceManifest.m",
+    "Bytes": 11607,
+    "SHA256": "eede505a1265e226189ef983ee1a8041b9d6ad23482125358bd49b64c05f3806"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/summarizeReleaseBenchmarks.m",
+    "Bytes": 8925,
+    "SHA256": "4ae265292f6e7affafa21bae303b5663a916d3477ea350eac61e6d13ccf7ee9a"
+  },
+  {
+    "Category": "benchmark",
+    "RelativePath": "src/benchmarks/weldedBeamSensitivityProfile.m",
+    "Bytes": 1960,
+    "SHA256": "832c92dff71f4e9464c7a6fed67e2d855d8fafcb77e586b85c2145baaed61569"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/cTSEMO.m",
+    "Bytes": 1244,
+    "SHA256": "6fd4189442ae7d95f270c3941072b5b932b1109dc4a68ff91553863a755e2f3e"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/cTSEMOOptions.m",
+    "Bytes": 17756,
+    "SHA256": "cdc2a8ac18ab094c59e3908f1bce4c505f711b47f787bd18b16ad0603c59309e"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/computeSortedPofRaster4D.m",
+    "Bytes": 16703,
+    "SHA256": "663678be474b9f9239bda7eb6a1ea2979c3138282ddde8e94a069232ffd81705"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/generateReleaseFigures.m",
+    "Bytes": 63715,
+    "SHA256": "e2153314425b76e6eb55b1de0b7abb186c01f71c707e635fc2f58d1de5d3f749"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/plot2DIterationAtlas.m",
+    "Bytes": 17381,
+    "SHA256": "ace817301ddc7f21709b40f6a69a91cb5227578b6464c963d833f26cd4192fd7"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/plotOptimizationHistory.m",
+    "Bytes": 13694,
+    "SHA256": "c4bdf818cbf15d286e70d4d29811e8e69099782760ca2c493e81f6117ea3f316"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/plotParetoFront.m",
+    "Bytes": 10076,
+    "SHA256": "f0b8dc32de891a0d5f8bbbfba8665def7399671b07284bdedeece52e14ee84b4"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/plotPofValidation.m",
+    "Bytes": 19363,
+    "SHA256": "1ab4e6bac01f49de773896e696aa34161ab9ffd1b47b2c7d52a1a3f334d103ae"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/plotSortedPofRaster4D.m",
+    "Bytes": 5509,
+    "SHA256": "d9c99ae4e9ce72ed055fb2833e3fc1517cced04eb49756805d4722f315429f26"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/plotWeldedBeamPilotComparison.m",
+    "Bytes": 6512,
+    "SHA256": "4be59e4cc1e46357cdf7c5c0b2cb96563dd0d1eb6142f727bf60804f24ccc6b0"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/private/diagnosticGet.m",
+    "Bytes": 1585,
+    "SHA256": "0fbc657d165928d7f02e99757fa82ea21c7dd4e009d8cbff15ad41379588631f"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/private/diagnosticPalette.m",
+    "Bytes": 616,
+    "SHA256": "de74583e80787f9567579152a75f4e1cba33101fe1d9fcc3bd86a7afb9084ad7"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/private/exportDiagnosticFigure.m",
+    "Bytes": 930,
+    "SHA256": "164b63557e18a1c007d8f46475fcab25cba4495153befcca838f53ffa71ec0a5"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/private/extractResultData.m",
+    "Bytes": 2471,
+    "SHA256": "eff6536c91094d71723e36642f6c119284a2c722d89617cf1230abc31cca1bb1"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/private/loadIterationDiagnostic.m",
+    "Bytes": 5065,
+    "SHA256": "375d297de3130e0025e3e796cf1e66d2e1c6d23ed2de4e6a3480b57b46fd5326"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/private/plotUnavailableTile.m",
+    "Bytes": 723,
+    "SHA256": "ad921ad9a964a3e2351cf39a094348773a79883f83d016d4877f5d5fe15cd053"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/diagnostics/private/resolveProblemBounds.m",
+    "Bytes": 1335,
+    "SHA256": "a021b96dc87cab773a1ad6d0ebae6a6231f9066837cc2e85a0259e8a8254b177"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/examples/runSmokeBenchmarks.m",
+    "Bytes": 9259,
+    "SHA256": "56a275ea5dd14f4d5d1954344c32d39547e30fab089284fb4d3477c79e977fc8"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/AcquisitionAndFallbackTest.m",
+    "Bytes": 14758,
+    "SHA256": "a37b91f000ea08bf7562a238f434fa6704485f511301d21971f67c5be1639058"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/BenchmarkRegistryTest.m",
+    "Bytes": 20555,
+    "SHA256": "68982b53f10834be2868fb8f3527754a98ead85fc41244a284f8b4b6ba5343cd"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/BinaryAndOptionsTest.m",
+    "Bytes": 12928,
+    "SHA256": "49eee154e63ac4fe1a6e3c521ea87996b8aa2b6f599533339d8c21a21d9e3222"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/CandidateAndParetoTest.m",
+    "Bytes": 5274,
+    "SHA256": "c6f26ba8fb8331cf4a17195c23a7b81cbc084070288db7139121b2912951e340"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/ClippedBinaryPofTest.m",
+    "Bytes": 8641,
+    "SHA256": "011bc31e63f384c2cb02dff08377c5c48ad40edab11a73a567bb1237059c02fb"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/LocalMatern32Test.m",
+    "Bytes": 3597,
+    "SHA256": "be2265e4f72ad179b536ccb5f36d964ddb3c795f593ac56eac0f1db73b8aa467"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/ObjectiveGpTsTest.m",
+    "Bytes": 9301,
+    "SHA256": "697db5644b1d44f549e6ccbcab790abd839e9e31dd8c9f2b94455e941eb54a5d"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/PrimaryGaTest.m",
+    "Bytes": 4354,
+    "SHA256": "16ae1fe677b81dc83c9a10814f8fa6489369475d48ff6060d8b8488f06b9653a"
+  },
+  {
+    "Category": "test",
+    "RelativePath": "src/tests/SolverIntegrationTest.m",
+    "Bytes": 18967,
+    "SHA256": "19648b7f846ddd76451bb4abd855314bca416f975bdb2fcffcba2e546ee4b72b"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/vendor/bradford-tsemo/TSEMO_V4.m",
+    "Bytes": 39992,
+    "SHA256": "d8c6ee771ce94de07d7cbef7d1b99d6bd936a64fcb1978e75ac5b74b7f371866"
+  },
+  {
+    "Category": "release",
+    "RelativePath": "src/vendor/bradford-tsemo/TSEMO_options.m",
+    "Bytes": 881,
+    "SHA256": "9bab786ef110d536bd058d39b711e6ad6f2888831129e85a043823585a4c78f7"
+  },
+  {
+    "Category": "study",
+    "RelativePath": "studies/two_dimensional_pof/reproduce_two_dimensional_pof_results.m",
+    "Bytes": 38443,
+    "SHA256": "af2eba06f0d4519b92db9f8c643a6affde853af9067f8ed3d381e5883dca8282"
+  }
+]

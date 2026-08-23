@@ -10,7 +10,20 @@
 *.pdf binary
 *.mat binary
 
-# Preserve third-party provenance byte-for-byte, including original
-# whitespace and line endings.
+# Preserve retained numerical evidence byte-for-byte. Several execution-time
+# source manifests hash the exact CSV/JSON payloads.
+manuscript/artifacts/**/*.csv -text
+manuscript/artifacts/**/*.json -text
+manuscript/artifacts/**/*.xml -text
+manuscript/artifacts/**/*.txt -text
+manuscript/artifacts/**/*.sha256 -text
+manuscript/introduction_pof_comparison/output/*.csv -text
+manuscript/introduction_pof_comparison/output/*.txt -text
+manuscript/artifacts/** -whitespace
+manuscript/introduction_pof_comparison/output/** -whitespace
+
+# Avoid further text conversion in third-party provenance files. Existing
+# snapshots may differ from upstream only by historical line-ending
+# normalization, as documented in NOTICE.md.
 src/vendor/** -text -whitespace
 src/benchmarks/provenance/** -text -whitespace

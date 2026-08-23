@@ -1,0 +1,82 @@
+{
+  "profile": "release",
+  "maxEvaluations": 30,
+  "seed": 2.026072505E+9,
+  "feasibility": {
+    "inputEncoding": "feasibleIsOne"
+  },
+  "candidates": {
+    "primaryCount": 1024,
+    "includeCorners": true,
+    "maxCornerDimension": 4,
+    "duplicateTolerance": 1E-9
+  },
+  "primarySearch": {
+    "method": "ga",
+    "populationSize": 80,
+    "eliteCount": 2,
+    "maxGenerations": 120,
+    "maxStallGenerations": 30,
+    "functionTolerance": 1E-8,
+    "useParallel": false,
+    "failurePolicy": "error"
+  },
+  "objectiveGP": {
+    "kernel": "matern32",
+    "nFeatures": 256,
+    "jitter": 1E-8,
+    "standardizeY": true
+  },
+  "pof": {
+    "rawInfeasible": -0.25,
+    "rawFeasible": 1.25,
+    "priorMean": 0.5,
+    "kernel": "matern32",
+    "baseLengthScale": [],
+    "localStrength": 1,
+    "localNeighbors": [],
+    "maxLengthScaleMultiplier": 3,
+    "jitter": 1E-10,
+    "clipBounds": [
+      0,
+      1
+    ]
+  },
+  "acquisition": {
+    "pofPower": 1,
+    "epsilon": 0,
+    "backgroundQuantile": 0.25,
+    "backgroundScale": 0.25,
+    "minPositiveHVI": 1E-12
+  },
+  "masks": {
+    "design": {
+      "enabled": true,
+      "radiusScale": 0.02,
+      "floor": 0
+    },
+    "codomain": {
+      "enabled": true,
+      "radiusScale": 0.05,
+      "floor": 0
+    }
+  },
+  "challengers": {
+    "enabled": true,
+    "count": 512,
+    "scoreCompletePools": true
+  },
+  "fallback": {
+    "enabled": true,
+    "triggerTolerance": 1E-12,
+    "minPoF": 0.6,
+    "distanceScale": 0.1,
+    "distanceWeight": 1
+  },
+  "logging": {
+    "level": "summary",
+    "directory": "@CASE_ROOT@",
+    "checkpoint": false,
+    "saveEveryIteration": true
+  }
+}

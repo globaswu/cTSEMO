@@ -1,0 +1,21 @@
+CURRENT-SOURCE TWO-DIMENSIONAL POF CAMPAIGN
+
+Protocol: one deterministic trajectory per problem; exact truth used only on an independent 201 x 201 cell-centred normalized grid.
+Diagnostic classification: predicted feasible iff p_i >= 0.5; exact equality is classified as feasible.
+
+COSSIN1: N=50, feasible observations=27, AUC=0.956843, Brier=0.077549, false-feasible=0.043676, false-infeasible=0.251181, balanced accuracy=0.852571.
+COSSIN2: N=80, feasible observations=36, AUC=0.916704, Brier=0.100723, false-feasible=0.054341, false-infeasible=0.216018, balanced accuracy=0.864821.
+BNH: N=40, feasible observations=39, AUC=0.801417, Brier=0.035479, false-feasible=0.539059, false-infeasible=0.005869, balanced accuracy=0.727536.
+SRN: N=40, feasible observations=24, AUC=0.827042, Brier=0.176212, false-feasible=0.064054, false-infeasible=0.256155, balanced accuracy=0.839895.
+
+Initial and final fields:
+COSSIN1 initial: N=20, AUC=0.965592, Brier=0.067989.
+COSSIN1 final: N=50, AUC=0.956843, Brier=0.077549.
+COSSIN2 initial: N=20, AUC=0.867378, Brier=0.117780.
+COSSIN2 final: N=80, AUC=0.916704, Brier=0.100723.
+BNH initial: N=10, AUC=0.826845, Brier=0.036173.
+BNH final: N=40, AUC=0.801417, Brier=0.035479.
+SRN initial: N=10, AUC=0.804337, Brier=0.142263.
+SRN final: N=40, AUC=0.827042, Brier=0.176212.
+
+Interpretation limit: this single-seed campaign supports spatial diagnostics and code integration only.

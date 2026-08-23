@@ -2,6 +2,40 @@
 
 All notable changes to cTSEMO are documented in this file.
 
+## [0.2.0] - 2026-08-24
+
+### Public reproduction release
+
+- Curated the final manuscript evidence into stable, timestamp-free reader
+  paths and excluded provisional, duplicate, and dense regenerable outputs.
+- Added the current two-dimensional, GA-primary/challenger, matched-dimension,
+  and hull-coverage reproduction workflows.
+- Added a manuscript-to-artifact map, AI-agent instructions, environment
+  record, SHA-256 artifact index, and clean-clone validation commands.
+- Restored public benchmark provenance, corrected citation and licensing
+  metadata, and removed workstation-path assumptions from reader workflows.
+
+### Changed
+
+- Replaced default finite-primary selection with bounded genetic-algorithm
+  maximization of the scalar cTSEMO acquisition.
+- Retained the deterministic Latin-hypercube/corner primary design as the GA
+  seed and acquisition-reference set.
+- Kept an independently seeded Latin-hypercube challenger as a coverage check;
+  the final primary and challenger proposals are compared using the same
+  Thompson draws, PoF, masks, and frozen acquisition background.
+- Separated ordinary GA-primary/challenger arbitration from Phase-I and
+  low-acquisition recovery policies.
+- Added primary-search diagnostics, deterministic random-stream separation,
+  an explicit finite-pool ablation/failure policy, and regression tests for
+  bounds, seed non-regression, reproducibility, and end-to-end arbitration.
+
+### Verification
+
+- The complete MATLAB R2025b repository suite passed 105 of 105 tests on
+  2026-08-09; the eight changed MATLAB files produced no Code Analyzer
+  findings. See `src/tests/TEST_SUMMARY.md` and `test-results.xml`.
+
 ## [0.1.0] - 2026-07-24
 
 Initial research release.

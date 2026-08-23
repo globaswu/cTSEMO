@@ -1,0 +1,44 @@
+{
+  "StudyId": "ga_primary_matched_150eval_5seed_20260809",
+  "CreatedAt": "09-Aug-2026 14:09:49",
+  "MatlabRelease": "2025b",
+  "SourceSha256": "527b9f3f91bfc799492c83d509fead6422b25016ccf65a1342ab322d4ab64799",
+  "SettingsSha256": "937fb5d100318ad3f9f39c425d7cf7f26a99286e3eb93a49d64468303d2bca14",
+  "ProblemIds": [
+    "WELDEDBEAM",
+    "CF1_D4",
+    "CF1_D10",
+    "C2DTLZ2_D4_R02",
+    "C2DTLZ2_D6_R02",
+    "MW7_D4",
+    "MW7_D6"
+  ],
+  "Replicates": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "InitialCount": 20,
+  "SequentialBudget": 130,
+  "TotalEvaluations": 150,
+  "ProbeCount": 262144,
+  "ProbeDesign": "Independent deterministic randomized LHS; corners excluded.",
+  "InitialDesign": "Deterministic randomized LHS; corners excluded.",
+  "PrimaryCandidateCount": 1024,
+  "ChallengerCandidateCount": 512,
+  "ObjectiveFeatureCount": 256,
+  "ChallengerPolicy": "Complete primary and challenger pools are acquisition-scored.",
+  "GpField": "Shipped clipped locally variable-length exact GP mean.",
+  "RfField": "Offline 120-tree bagged proxy; MinLeafSize=3; ceil(sqrt(D)) split variables.",
+  "DecisionThreshold": 0.5,
+  "ConfidentThresholds": [
+    0.33333333333333331,
+    0.66666666666666663
+  ],
+  "EvidenceClass": [
+    "Five-seed fixed-budget engineering screen by default. ",
+    "RF is trajectory-conditioned offline evidence."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "SchemaVersion": 1,
+  "Algorithm": "SHA-256",
+  "ManifestFile": "source_manifest.csv",
+  "ManifestSHA256": "f5528eba4868f5fb81b417734eb351f80b97aa94c1a8d3456cee1a1c67e25be7",
+  "SummaryFile": "source_manifest_summary.json",
+  "FileCount": 72,
+  "ReleaseMFileCount": 68,
+  "StudyScriptCount": 4,
+  "ReleaseRoot": "src",
+  "StudyScripts": [
+    "run_matched_dimension_pof_study.m",
+    "launch_full_study.m",
+    "plot_matched_dimension_pof_study.m",
+    "validate_matched_dimension_pof_study.m"
+  ],
+  "Ordering": "Case-insensitive ascending repository-relative path",
+  "AuthorityStatement": "ManifestSHA256 identifies the exact source_manifest.csv bytes."
+}

@@ -1,6 +1,0 @@
-File,Name,Objective1Column,Objective2Column,FinitePointCount,FilePathRoot
-@COMPETITOR_SUMMARY_DIR@/../competitors/botorch/testprob/native_results/botorch_native_welded_20260701_093401/pareto_front.csv,BoTorch (150),f1,f2,17,@COMPETITOR_SUMMARY_DIR@
-@COMPETITOR_SUMMARY_DIR@/../competitors/trieste/testprob/native_results/trieste_native_welded_20260701_111913/pareto_front.csv,Trieste (150),f1,f2,18,@COMPETITOR_SUMMARY_DIR@
-@COMPETITOR_SUMMARY_DIR@/../competitors/usemoc/testprob/native_results/usemoc_native_welded_20260701_085416/pareto_front.csv,USeMOC (150),f1,f2,15,@COMPETITOR_SUMMARY_DIR@
-@COMPETITOR_SUMMARY_DIR@/../competitors/comboo/testprob/native_results/comboo_native_welded_20260701_115105/pareto_front.csv,COMBOO (150),f1,f2,14,@COMPETITOR_SUMMARY_DIR@
-@COMPETITOR_SUMMARY_DIR@/../competitors/pac-moo/testprob/native_results/pacmoo_native_welded_20260701_090625/pareto_front.csv,PAC-MOO (150),f1,f2,18,@COMPETITOR_SUMMARY_DIR@
