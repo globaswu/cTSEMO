@@ -1,13 +1,10 @@
 # Examples
 
-The smoke runner uses the public release API and source-traced definitions
-from `../benchmarks`.
+The smoke runner uses the public API and source-traced benchmark definitions.
+Run it from the repository root after setup:
 
 ```matlab
-addpath("C:\path\to\cTSEMO-release")
-addpath("C:\path\to\cTSEMO-release\benchmarks")
-addpath("C:\path\to\cTSEMO-release\examples")
-
+setup_ctsemo;
 results = runSmokeBenchmarks();
 ```
 

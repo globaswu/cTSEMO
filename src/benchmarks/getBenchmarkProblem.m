@@ -24,9 +24,10 @@ function problem = getBenchmarkProblem(problemId)
 %     CF1_D4
 %     CF1_D10 (CF1)
 %
-%   All equations and bounds below are transcribed from files already
-%   present in this workspace. No fixed hypervolume reference was found in
-%   those definitions, so hypervolumeReference is explicitly empty.
+%   Equations and bounds below follow the published benchmark definitions
+%   and pinned source references documented under benchmarks/provenance.
+%   No fixed hypervolume reference was found in those definitions, so
+%   hypervolumeReference is explicitly empty.
 
 narginchk(1, 1);
 validateattributes(problemId, {'char', 'string'}, {'scalartext'}, ...
@@ -107,9 +108,7 @@ problem.notes = ['Synthetic two-variable problem used in the existing ' ...
 end
 
 function problem = bnhProblem()
-% Sources:
-%   benchmarks/provenance/bradford-test-functions/ttbuk2.m
-%   benchmarks/provenance/bradford-test-functions/ttbukg2.m
+% Source: benchmarks/provenance/benchmark-definitions.md.
 % The canonical BNH domain [0,5] x [0,3] is retained here rather than the
 % wider matched-domain stress interval used by some earlier scripts.
 problem = baseProblem();
@@ -128,19 +127,13 @@ problem.constraintNames = {'inside radius-5 disk', ...
     'outside excluded disk'};
 problem.constraintUnits = {'dimensionless', 'dimensionless'};
 problem.sourceFiles = { ...
-    'benchmarks/provenance/bradford-test-functions/ttbuk2.m', ...
-    'benchmarks/provenance/bradford-test-functions/ttbukg2.m'};
+    'benchmarks/provenance/benchmark-definitions.md'};
 problem.notes = ['Canonical bounded BNH definition. This benchmark can ' ...
     'also be requested using the historical alias BK2.'];
 end
 
 function problem = srnProblem()
-% Sources:
-%   benchmarks/provenance/bradford-test-functions/ttbuk1.m
-%   benchmarks/provenance/bradford-test-functions/ttbukg1.m
-% These files contain the standard quadratic circle x1^2+x2^2 <= 225 and
-% the (x2-1)^2 objective term. Do not copy the older generated audit
-% variant that used fourth powers and shifted the first objective.
+% Source: benchmarks/provenance/benchmark-definitions.md.
 problem = baseProblem();
 problem.id = 'SRN';
 problem.name = 'Srinivas-Deb SRN';
@@ -157,17 +150,13 @@ problem.constraintNames = {'x_1^2 + x_2^2 <= 225', ...
     'x_1 - 3 x_2 + 10 <= 0'};
 problem.constraintUnits = {'dimensionless', 'dimensionless'};
 problem.sourceFiles = { ...
-    'benchmarks/provenance/bradford-test-functions/ttbuk1.m', ...
-    'benchmarks/provenance/bradford-test-functions/ttbukg1.m'};
+    'benchmarks/provenance/benchmark-definitions.md'};
 problem.notes = ['Corrected standard SRN definition. This benchmark can ' ...
     'also be requested using the historical alias BK1.'];
 end
 
 function problem = weldedBeamProblem()
-% Sources:
-%   benchmarks/provenance/bradford-test-functions/weldbeam.m
-%   benchmarks/provenance/bradford-test-functions/weldbeamconstr.m
-%   cTSEMOp/run_weldbeam_variant_150.m (vectorized transcription and bounds)
+% Source: benchmarks/provenance/benchmark-definitions.md.
 % The implementation uses the existing imperial-unit formulation: force in
 % lb, lengths in in, and stress/modulus in psi.
 problem = baseProblem();
@@ -186,8 +175,7 @@ problem.constraintNames = {'shear stress', 'normal stress', ...
     'weld/beam thickness ordering', 'buckling load'};
 problem.constraintUnits = {'psi', 'psi', 'in', 'lb'};
 problem.sourceFiles = { ...
-    'benchmarks/provenance/bradford-test-functions/weldbeam.m', ...
-    'benchmarks/provenance/bradford-test-functions/weldbeamconstr.m', ...
+    'benchmarks/provenance/benchmark-definitions.md', ...
     'benchmarks/getBenchmarkProblem.m'};
 problem.notes = ['Exact four-constraint formulation and bounds used by ' ...
     'the existing WB150 scripts. Objective 1 has empirical cost units.'];
@@ -292,8 +280,9 @@ problem.constraintUnits = {'dimensionless'};
 problem.sourceFiles = { ...
     'benchmarks/provenance/high-dimensional-benchmarks.md'};
 problem.notes = sprintf([ ...
-    '%d-variable CEC 2009 CF1 transcription from the ' ...
-    'repository-contained PlatEMO implementation.'], dimension);
+    '%d-variable implementation of the published CEC 2009 CF1 ' ...
+    'definition, with the feasibility slack converted to G <= 0.'], ...
+    dimension);
 end
 
 function problem = baseProblem()

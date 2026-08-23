@@ -1,0 +1,5 @@
+ProblemId,InitialCount,SequentialBudget,TotalEvaluations,InitialSeed,SolverSeed,IncludeCorners,PrimaryCandidates,PrimarySearchMethod,GAPopulationSize,GAEliteCount,GAMaxGenerations,GAMaxStallGenerations,GAFunctionTolerance,ChallengerCandidates,ObjectiveRandomFeatures,ScoreCompletePools,LoggingLevel
+COSSIN1,20,30,50,2026072401,2026072501,1,1024,ga,80,2,120,30,1e-08,512,256,1,full
+COSSIN2,20,60,80,2026072402,2026072502,1,1024,ga,80,2,120,30,1e-08,512,256,1,full
+BNH,10,30,40,2026072403,2026072503,1,1024,ga,80,2,120,30,1e-08,512,256,1,full
+SRN,10,30,40,2026072405,2026072505,1,1024,ga,80,2,120,30,1e-08,512,256,1,full

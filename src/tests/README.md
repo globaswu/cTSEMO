@@ -4,9 +4,13 @@ The tests use `matlab.unittest.TestCase` classes and exercise only public
 release interfaces. From the release root, run:
 
 ```matlab
-results = runtests(fullfile(pwd, "tests"));
+setup_ctsemo;
+results = run_repository_tests;
 assertSuccess(results);
 ```
+
+Run `run_release_tests` from the repository root to execute the same suite and
+refresh `manuscript/artifacts/tests/`.
 
 The suite covers:
 

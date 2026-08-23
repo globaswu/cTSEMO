@@ -37,7 +37,12 @@ timestamp-free MATLAB paths.
 |---|---|
 | Six-method PoF atlas | `manuscript/introduction_pof_comparison/run_introduction_pof_comparison.m` |
 | Bernoulli-GPC versus proposed clipped GP-mean field | `manuscript/introduction_pof_comparison/run_introduction_pof_comparison.m` |
+| Two-dimensional PoF fields and learning histories | `studies/two_dimensional_pof/reproduce_two_dimensional_pof_results.m` |
+| COSSIN2 acquisition decomposition | `studies/two_dimensional_pof/make_cossin2_acquisition_decomposition.py` |
+| Shared classification-error legend | `studies/two_dimensional_pof/build_shared_classification_legend.py` |
 | Matched-dimension summary figures | `studies/dimension_matched_pof/plot_manuscript_dimension_figures.m` |
+| Retained higher-dimensional histories | `manuscript/artifacts/ga_primary_dimension/reproduce_highdimensional_results.m` |
+| Hull-coverage diagnostic | `studies/hull_coverage/plot_dimension_hull_coverage.py` |
 
 ## Benchmarks and diagnostics
 
@@ -46,7 +51,6 @@ timestamp-free MATLAB paths.
 | Benchmark registry | `src/benchmarks/getBenchmarkProblem.m` |
 | Release benchmark campaign | `src/benchmarks/runReleaseBenchmarks.m` |
 | Benchmark summary | `src/benchmarks/summarizeReleaseBenchmarks.m` |
-| Diagnostic figure dispatcher | `src/diagnostics/generateReleaseFigures.m` |
 | Two-dimensional iteration atlas | `src/diagnostics/plot2DIterationAtlas.m` |
 | Four-dimensional sorted PoF raster | `src/diagnostics/plotSortedPofRaster4D.m` |
 | PoF validation diagnostics | `src/diagnostics/plotPofValidation.m` |

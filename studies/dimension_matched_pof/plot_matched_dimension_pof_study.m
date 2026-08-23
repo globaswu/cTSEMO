@@ -197,6 +197,8 @@ title(layout, [ ...
 outputFile = string(fullfile(outputDirectory, ...
     "paired_dimension_gp_rf_metrics.png"));
 exportgraphics(figureHandle, outputFile, "Resolution", 240);
+exportgraphics(figureHandle, replace(outputFile, ".png", ".pdf"), ...
+    "ContentType", "vector");
 close(figureHandle);
 end
 
@@ -259,6 +261,8 @@ title(layout, ...
 outputFile = string(fullfile(outputDirectory, ...
     "all_problem_gp_rf_metrics.png"));
 exportgraphics(figureHandle, outputFile, "Resolution", 240);
+exportgraphics(figureHandle, replace(outputFile, ".png", ".pdf"), ...
+    "ContentType", "vector");
 close(figureHandle);
 end
 
@@ -293,13 +297,17 @@ end
 function outputFile = plotD4Representative( ...
         selectedRow, metrics, studyDirectory, outputDirectory)
 problem = getBenchmarkProblem(selectedRow.ProblemId);
-resultRecord = load(selectedRow.ResultFile, "result");
+    resultFile = resolveCampaignFile( ...
+        selectedRow.ResultFile, studyDirectory);
+    resultRecord = load(resultFile, "result");
 result = resultRecord.result;
 probeFile = fullfile(studyDirectory, "probes", ...
     selectedRow.ProblemId + "_volume_probes.mat");
 probeRecord = load(probeFile, "probeX", "truth");
-predictionRecord = load( ...
-    selectedRow.PredictionFile, "gpScore", "rfScore");
+    predictionFile = resolveCampaignFile( ...
+        selectedRow.PredictionFile, studyDirectory);
+    predictionRecord = load( ...
+        predictionFile, "gpScore", "rfScore");
 probeX = probeRecord.probeX;
 probeTruth = logical(probeRecord.truth);
 gpScore = predictionRecord.gpScore;
@@ -376,6 +384,8 @@ outputFile = string(fullfile(outputDirectory, ...
     lower(selectedRow.ProblemId) + ...
     "_pf_gp_rf_rank_truth_confusion.png"));
 exportgraphics(figureHandle, outputFile, "Resolution", 220);
+exportgraphics(figureHandle, replace(outputFile, ".png", ".pdf"), ...
+    "ContentType", "vector");
 close(figureHandle);
 end
 
@@ -523,4 +533,26 @@ colorbarHandle.TickLabels = ["TN", "TP", "false feasible", "false infeasible"];
 xlabel(axisHandle, "rank-plane x");
 ylabel(axisHandle, "rank-plane y");
 title(axisHandle, titleText);
+end
+
+function pathValue = resolveCampaignFile(storedPath, studyDirectory)
+pathValue = string(storedPath);
+normalized = replace(pathValue, "/", filesep);
+marker = filesep + "runs" + filesep;
+location = strfind(lower(normalized), lower(marker));
+if ~isempty(location)
+    suffix = extractAfter(normalized, ...
+        location(end) + strlength(marker) - 1);
+    rebasedPath = fullfile(studyDirectory, "runs", suffix);
+    if isfile(rebasedPath)
+        pathValue = rebasedPath;
+        return
+    end
+end
+if isfile(pathValue)
+    return
+end
+error("cTSEMO:DimensionStudyPlot:ArtifactMissing", ...
+    "Cannot resolve campaign artifact '%s' below %s.", ...
+    storedPath, studyDirectory);
 end

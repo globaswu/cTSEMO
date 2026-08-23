@@ -1,112 +1,126 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="AcquisitionAndFallbackTest" skipped="0" tests="15" time="0.78535">
-    <testcase classname="AcquisitionAndFallbackTest" name="testPareto2dRemovesDominatedAndDuplicateRows" time="0.39452"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testHypervolume2dKnownUnion" time="0.0272"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testSampledHviKnownImprovement" time="0.02849"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testNoPositiveSampledHviRequestsFallback" time="0.039192"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testDisabledSoftMasksReturnOnes" time="0.05424"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testHardDesignDuplicateIsAlwaysMasked" time="0.021074"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testSoftMasksPenalizeNearerCandidates" time="0.030763"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testAcquisitionFactorization" time="0.020214"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testNonunitPofPowerAndDefaultBackground" time="0.02693"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testDuplicateCandidateHasZeroAcquisition" time="0.015054"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testPrimaryAndChallengerUseSameAcquisition" time="0.0068679"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testAllInfeasiblePhaseUsesMaximinRecovery" time="0.025662"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testZeroHviFallbackUsesPofAndNovelty" time="0.0054833"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testFallbackExcludesInvalidCandidate" time="0.0029137"/>
-    <testcase classname="AcquisitionAndFallbackTest" name="testAllInvalidFallbackRequestsPoolRegeneration" time="0.08674"/>
+  <testsuite errors="0" failures="0" name="AcquisitionAndFallbackTest" skipped="0" tests="16" time="0.8362">
+    <testcase classname="AcquisitionAndFallbackTest" name="testPareto2dRemovesDominatedAndDuplicateRows" time="0.4043"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testHypervolume2dKnownUnion" time="0.022805"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testSampledHviKnownImprovement" time="0.039979"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testNoPositiveSampledHviRequestsFallback" time="0.051125"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testFixedEpsilonScoresZeroHviBatchButRequestsFallback" time="0.10364"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testDisabledSoftMasksReturnOnes" time="0.01067"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testHardDesignDuplicateIsAlwaysMasked" time="0.010719"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testSoftMasksPenalizeNearerCandidates" time="0.013627"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testAcquisitionFactorization" time="0.034841"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testNonunitPofPowerAndDefaultBackground" time="0.013168"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testDuplicateCandidateHasZeroAcquisition" time="0.015553"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testPrimaryAndChallengerUseSameAcquisition" time="0.011834"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testAllInfeasiblePhaseUsesMaximinRecovery" time="0.024212"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testZeroHviFallbackUsesPofAndNovelty" time="0.0050305"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testFallbackExcludesInvalidCandidate" time="0.0028225"/>
+    <testcase classname="AcquisitionAndFallbackTest" name="testAllInvalidFallbackRequestsPoolRegeneration" time="0.071875"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="BenchmarkRegistryTest" skipped="0" tests="12" time="3.9673">
-    <testcase classname="BenchmarkRegistryTest" name="testCossinInitialDesignIncludesAllCorners" time="0.43524"/>
-    <testcase classname="BenchmarkRegistryTest" name="testInitialDesignRestoresCallerRng" time="0.04393"/>
-    <testcase classname="BenchmarkRegistryTest" name="testLocalLhsIsReproducibleAndStratified" time="0.031028"/>
-    <testcase classname="BenchmarkRegistryTest" name="testBnhAllInfeasibleStressDesign" time="0.021549"/>
-    <testcase classname="BenchmarkRegistryTest" name="testWeldedBeamDefinitionHasFourVariables" time="0.025922"/>
-    <testcase classname="BenchmarkRegistryTest" name="testC2Dtlz2DefinitionHasThreeVariables" time="0.017139"/>
-    <testcase classname="BenchmarkRegistryTest" name="testHighDimensionalDefinitionsAreVectorized" time="0.044305"/>
-    <testcase classname="BenchmarkRegistryTest" name="testHighDimensionalReferencePointsMatchEquations" time="0.023974"/>
-    <testcase classname="BenchmarkRegistryTest" name="testSmokeRunnerRejectsUnknownOptions" time="0.11571"/>
-    <testcase classname="BenchmarkRegistryTest" name="testWeldedBeamSensitivityProfilesParse" time="0.025635"/>
-    <testcase classname="BenchmarkRegistryTest" name="testSourceSealIsPortableAndSelfConsistent" time="2.6633"/>
-    <testcase classname="BenchmarkRegistryTest" name="testSummarizerResolvesPortableCampaignToken" time="0.51953"/>
+  <testsuite errors="0" failures="0" name="BenchmarkRegistryTest" skipped="0" tests="15" time="6.4272">
+    <testcase classname="BenchmarkRegistryTest" name="testCossinInitialDesignIncludesAllCorners" time="0.51327"/>
+    <testcase classname="BenchmarkRegistryTest" name="testInitialDesignRestoresCallerRng" time="0.25938"/>
+    <testcase classname="BenchmarkRegistryTest" name="testLocalLhsIsReproducibleAndStratified" time="0.18903"/>
+    <testcase classname="BenchmarkRegistryTest" name="testBnhAllInfeasibleStressDesign" time="0.099925"/>
+    <testcase classname="BenchmarkRegistryTest" name="testWeldedBeamDefinitionHasFourVariables" time="0.13455"/>
+    <testcase classname="BenchmarkRegistryTest" name="testC2Dtlz2DefinitionHasThreeVariables" time="0.014028"/>
+    <testcase classname="BenchmarkRegistryTest" name="testHighDimensionalDefinitionsAreVectorized" time="0.12597"/>
+    <testcase classname="BenchmarkRegistryTest" name="testFourDimensionalDefinitionContracts" time="0.052019"/>
+    <testcase classname="BenchmarkRegistryTest" name="testFourDimensionalDefinitionsAreVectorized" time="0.10367"/>
+    <testcase classname="BenchmarkRegistryTest" name="testFourDimensionalAliasesResolve" time="0.046323"/>
+    <testcase classname="BenchmarkRegistryTest" name="testHighDimensionalReferencePointsMatchEquations" time="0.074846"/>
+    <testcase classname="BenchmarkRegistryTest" name="testSmokeRunnerRejectsUnknownOptions" time="0.22902"/>
+    <testcase classname="BenchmarkRegistryTest" name="testWeldedBeamSensitivityProfilesParse" time="0.056542"/>
+    <testcase classname="BenchmarkRegistryTest" name="testSourceSealIsPortableAndSelfConsistent" time="4.0005"/>
+    <testcase classname="BenchmarkRegistryTest" name="testSummarizerResolvesPortableCampaignToken" time="0.52819"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="BinaryAndOptionsTest" skipped="0" tests="22" time="0.43724">
-    <testcase classname="BinaryAndOptionsTest" name="testBinaryLabelsRejectNonfiniteRows" time="0.13839"/>
-    <testcase classname="BinaryAndOptionsTest" name="testBinaryLabelsUseTolerance" time="0.0039312"/>
-    <testcase classname="BinaryAndOptionsTest" name="testReleaseRawTargets" time="0.023051"/>
-    <testcase classname="BinaryAndOptionsTest" name="testAdjustableRawTargets" time="0.0073644"/>
-    <testcase classname="BinaryAndOptionsTest" name="testPoFBoundaryValuesAreAccepted" time="0.0047004"/>
-    <testcase classname="BinaryAndOptionsTest" name="testPositiveRawInfeasibleIsRejected" time="0.022503"/>
-    <testcase classname="BinaryAndOptionsTest" name="testSubunitRawFeasibleIsRejected" time="0.017121"/>
-    <testcase classname="BinaryAndOptionsTest" name="testPriorAtInfeasibleTargetIsRejected" time="0.011186"/>
-    <testcase classname="BinaryAndOptionsTest" name="testPriorAtFeasibleTargetIsRejected" time="0.026798"/>
-    <testcase classname="BinaryAndOptionsTest" name="testExcessivePoFJitterIsRejected" time="0.004876"/>
-    <testcase classname="BinaryAndOptionsTest" name="testNoOpFieldsAreAbsentFromSchema" time="0.0033823"/>
-    <testcase classname="BinaryAndOptionsTest" name="testCompletePoolScoringIsShippedDefault" time="0.0008814"/>
-    <testcase classname="BinaryAndOptionsTest" name="testLegacyChallengerAblationCanBeRequested" time="0.0035501"/>
-    <testcase classname="BinaryAndOptionsTest" name="testCompletePoolScoringRequiresLogicalScalar" time="0.0052616"/>
-    <testcase classname="BinaryAndOptionsTest" name="testUnknownTopLevelOptionIsRejected" time="0.0036409"/>
-    <testcase classname="BinaryAndOptionsTest" name="testUnknownNestedOptionIsRejected" time="0.0036667"/>
-    <testcase classname="BinaryAndOptionsTest" name="testExplicitFeasibleIsOneEncoding" time="0.023947"/>
-    <testcase classname="BinaryAndOptionsTest" name="testContinuousEncodingTreatsNonfiniteAsInfeasible" time="0.0073779"/>
-    <testcase classname="BinaryAndOptionsTest" name="testAmbiguousNumericLabelsAreRejected" time="0.01361"/>
-    <testcase classname="BinaryAndOptionsTest" name="testDuplicateLocationsWithConflictingLabelsAreRejected" time="0.034852"/>
-    <testcase classname="BinaryAndOptionsTest" name="testAllFeasibleStateIsClassified" time="0.015424"/>
-    <testcase classname="BinaryAndOptionsTest" name="testNoFeasibleStateIsClassified" time="0.061733"/>
+  <testsuite errors="0" failures="0" name="BinaryAndOptionsTest" skipped="0" tests="24" time="0.43259">
+    <testcase classname="BinaryAndOptionsTest" name="testBinaryLabelsRejectNonfiniteRows" time="0.12643"/>
+    <testcase classname="BinaryAndOptionsTest" name="testBinaryLabelsUseTolerance" time="0.0038445"/>
+    <testcase classname="BinaryAndOptionsTest" name="testReleaseRawTargets" time="0.019553"/>
+    <testcase classname="BinaryAndOptionsTest" name="testAdjustableRawTargets" time="0.0059039"/>
+    <testcase classname="BinaryAndOptionsTest" name="testPoFBoundaryValuesAreAccepted" time="0.0034456"/>
+    <testcase classname="BinaryAndOptionsTest" name="testPositiveRawInfeasibleIsRejected" time="0.022765"/>
+    <testcase classname="BinaryAndOptionsTest" name="testSubunitRawFeasibleIsRejected" time="0.014877"/>
+    <testcase classname="BinaryAndOptionsTest" name="testPriorAtInfeasibleTargetIsRejected" time="0.010262"/>
+    <testcase classname="BinaryAndOptionsTest" name="testPriorAtFeasibleTargetIsRejected" time="0.029239"/>
+    <testcase classname="BinaryAndOptionsTest" name="testExcessivePoFJitterIsRejected" time="0.0057067"/>
+    <testcase classname="BinaryAndOptionsTest" name="testNoOpFieldsAreAbsentFromSchema" time="0.0034859"/>
+    <testcase classname="BinaryAndOptionsTest" name="testCompletePoolScoringIsShippedDefault" time="0.0010324"/>
+    <testcase classname="BinaryAndOptionsTest" name="testGaIsShippedPrimarySearchDefault" time="0.0086076"/>
+    <testcase classname="BinaryAndOptionsTest" name="testGaEliteCountMustBeSmallerThanPopulation" time="0.0050519"/>
+    <testcase classname="BinaryAndOptionsTest" name="testLegacyChallengerAblationCanBeRequested" time="0.0015843"/>
+    <testcase classname="BinaryAndOptionsTest" name="testCompletePoolScoringRequiresLogicalScalar" time="0.0056083"/>
+    <testcase classname="BinaryAndOptionsTest" name="testUnknownTopLevelOptionIsRejected" time="0.004957"/>
+    <testcase classname="BinaryAndOptionsTest" name="testUnknownNestedOptionIsRejected" time="0.0038152"/>
+    <testcase classname="BinaryAndOptionsTest" name="testExplicitFeasibleIsOneEncoding" time="0.028077"/>
+    <testcase classname="BinaryAndOptionsTest" name="testContinuousEncodingTreatsNonfiniteAsInfeasible" time="0.00812"/>
+    <testcase classname="BinaryAndOptionsTest" name="testAmbiguousNumericLabelsAreRejected" time="0.016751"/>
+    <testcase classname="BinaryAndOptionsTest" name="testDuplicateLocationsWithConflictingLabelsAreRejected" time="0.033849"/>
+    <testcase classname="BinaryAndOptionsTest" name="testAllFeasibleStateIsClassified" time="0.012467"/>
+    <testcase classname="BinaryAndOptionsTest" name="testNoFeasibleStateIsClassified" time="0.057157"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="CandidateAndParetoTest" skipped="0" tests="8" time="0.33906">
-    <testcase classname="CandidateAndParetoTest" name="testCandidatePoolsAreDeterministic" time="0.17308"/>
-    <testcase classname="CandidateAndParetoTest" name="testCandidatePoolRestoresCallerRng" time="0.029556"/>
-    <testcase classname="CandidateAndParetoTest" name="testCandidatePoolsExcludeEvaluatedPoints" time="0.016137"/>
-    <testcase classname="CandidateAndParetoTest" name="testPrimaryAndChallengerPoolsAreDisjoint" time="0.014173"/>
-    <testcase classname="CandidateAndParetoTest" name="testTwoDimensionalPrimaryPoolIncludesCorners" time="0.0093373"/>
-    <testcase classname="CandidateAndParetoTest" name="testParetoFrontAndHypervolume" time="0.022046"/>
-    <testcase classname="CandidateAndParetoTest" name="testInfeasiblePointsDoNotEnterParetoFront" time="0.0085032"/>
-    <testcase classname="CandidateAndParetoTest" name="testNoFeasiblePointGivesEmptyParetoFront" time="0.066235"/>
+  <testsuite errors="0" failures="0" name="CandidateAndParetoTest" skipped="0" tests="8" time="0.34777">
+    <testcase classname="CandidateAndParetoTest" name="testCandidatePoolsAreDeterministic" time="0.1714"/>
+    <testcase classname="CandidateAndParetoTest" name="testCandidatePoolRestoresCallerRng" time="0.03155"/>
+    <testcase classname="CandidateAndParetoTest" name="testCandidatePoolsExcludeEvaluatedPoints" time="0.024252"/>
+    <testcase classname="CandidateAndParetoTest" name="testPrimaryAndChallengerPoolsAreDisjoint" time="0.020785"/>
+    <testcase classname="CandidateAndParetoTest" name="testTwoDimensionalPrimaryPoolIncludesCorners" time="0.011742"/>
+    <testcase classname="CandidateAndParetoTest" name="testParetoFrontAndHypervolume" time="0.02114"/>
+    <testcase classname="CandidateAndParetoTest" name="testInfeasiblePointsDoNotEnterParetoFront" time="0.0065547"/>
+    <testcase classname="CandidateAndParetoTest" name="testNoFeasiblePointGivesEmptyParetoFront" time="0.060349"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="ClippedBinaryPofTest" skipped="0" tests="11" time="0.47989">
-    <testcase classname="ClippedBinaryPofTest" name="testDefaultRawTargetsAndExactAnchors" time="0.21766"/>
-    <testcase classname="ClippedBinaryPofTest" name="testOptionsRawTargetsReachInterpolator" time="0.031604"/>
-    <testcase classname="ClippedBinaryPofTest" name="testPredictionsAreClippedToUnitInterval" time="0.055462"/>
-    <testcase classname="ClippedBinaryPofTest" name="testConsistentDuplicatesAreConsolidated" time="0.015603"/>
-    <testcase classname="ClippedBinaryPofTest" name="testConflictingDuplicatesAreRejected" time="0.027448"/>
-    <testcase classname="ClippedBinaryPofTest" name="testAllFeasibleAnchors" time="0.030315"/>
-    <testcase classname="ClippedBinaryPofTest" name="testAllInfeasibleAnchors" time="0.020061"/>
-    <testcase classname="ClippedBinaryPofTest" name="testFourDimensionalExactInterpolation" time="0.0079443"/>
-    <testcase classname="ClippedBinaryPofTest" name="testSixDimensionalExactInterpolation" time="0.0052094"/>
-    <testcase classname="ClippedBinaryPofTest" name="testStationaryFallbackHasConstantLength" time="0.0049587"/>
-    <testcase classname="ClippedBinaryPofTest" name="testDenseInfeasibleRegionGetsLongerLocalLength" time="0.063632"/>
+  <testsuite errors="0" failures="0" name="ClippedBinaryPofTest" skipped="0" tests="11" time="0.4765">
+    <testcase classname="ClippedBinaryPofTest" name="testDefaultRawTargetsAndExactAnchors" time="0.19959"/>
+    <testcase classname="ClippedBinaryPofTest" name="testOptionsRawTargetsReachInterpolator" time="0.03067"/>
+    <testcase classname="ClippedBinaryPofTest" name="testPredictionsAreClippedToUnitInterval" time="0.077723"/>
+    <testcase classname="ClippedBinaryPofTest" name="testConsistentDuplicatesAreConsolidated" time="0.014019"/>
+    <testcase classname="ClippedBinaryPofTest" name="testConflictingDuplicatesAreRejected" time="0.031484"/>
+    <testcase classname="ClippedBinaryPofTest" name="testAllFeasibleAnchors" time="0.02654"/>
+    <testcase classname="ClippedBinaryPofTest" name="testAllInfeasibleAnchors" time="0.017782"/>
+    <testcase classname="ClippedBinaryPofTest" name="testFourDimensionalExactInterpolation" time="0.007517"/>
+    <testcase classname="ClippedBinaryPofTest" name="testSixDimensionalExactInterpolation" time="0.004672"/>
+    <testcase classname="ClippedBinaryPofTest" name="testStationaryFallbackHasConstantLength" time="0.0044063"/>
+    <testcase classname="ClippedBinaryPofTest" name="testDenseInfeasibleRegionGetsLongerLocalLength" time="0.0621"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="LocalMatern32Test" skipped="0" tests="5" time="0.18004">
-    <testcase classname="LocalMatern32Test" name="testTwoDimensionalKernelIsSymmetric" time="0.090072"/>
-    <testcase classname="LocalMatern32Test" name="testTwoDimensionalKernelIsPositiveDefinite" time="0.0053966"/>
-    <testcase classname="LocalMatern32Test" name="testFourDimensionalKernelIsSymmetric" time="0.0039095"/>
-    <testcase classname="LocalMatern32Test" name="testFourDimensionalKernelIsPositiveDefinite" time="0.0009106"/>
-    <testcase classname="LocalMatern32Test" name="testCrossCovarianceHasExpectedShape" time="0.079752"/>
+  <testsuite errors="0" failures="0" name="LocalMatern32Test" skipped="0" tests="5" time="0.20273">
+    <testcase classname="LocalMatern32Test" name="testTwoDimensionalKernelIsSymmetric" time="0.11333"/>
+    <testcase classname="LocalMatern32Test" name="testTwoDimensionalKernelIsPositiveDefinite" time="0.0051103"/>
+    <testcase classname="LocalMatern32Test" name="testFourDimensionalKernelIsSymmetric" time="0.0051892"/>
+    <testcase classname="LocalMatern32Test" name="testFourDimensionalKernelIsPositiveDefinite" time="0.0011697"/>
+    <testcase classname="LocalMatern32Test" name="testCrossCovarianceHasExpectedShape" time="0.077931"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="ObjectiveGpTsTest" skipped="0" tests="7" time="0.37753">
-    <testcase classname="ObjectiveGpTsTest" name="testPosteriorPredictionIsFinite" time="0.12632"/>
-    <testcase classname="ObjectiveGpTsTest" name="testSameSeedProducesSameDraw" time="0.04151"/>
-    <testcase classname="ObjectiveGpTsTest" name="testDifferentDrawIndexProducesDifferentDraw" time="0.018518"/>
-    <testcase classname="ObjectiveGpTsTest" name="testThompsonDrawRestoresCallerRng" time="0.020699"/>
-    <testcase classname="ObjectiveGpTsTest" name="testBaseQuantilesMatchFormerSpectralDefinition" time="0.097866"/>
-    <testcase classname="ObjectiveGpTsTest" name="testSpectralDrawFieldsAndValuesAreFinite" time="0.0082048"/>
-    <testcase classname="ObjectiveGpTsTest" name="testPhysicalInputBoundsAreHonored" time="0.064413"/>
+  <testsuite errors="0" failures="0" name="ObjectiveGpTsTest" skipped="0" tests="7" time="0.37467">
+    <testcase classname="ObjectiveGpTsTest" name="testPosteriorPredictionIsFinite" time="0.15033"/>
+    <testcase classname="ObjectiveGpTsTest" name="testSameSeedProducesSameDraw" time="0.063965"/>
+    <testcase classname="ObjectiveGpTsTest" name="testDifferentDrawIndexProducesDifferentDraw" time="0.018515"/>
+    <testcase classname="ObjectiveGpTsTest" name="testThompsonDrawRestoresCallerRng" time="0.022697"/>
+    <testcase classname="ObjectiveGpTsTest" name="testBaseQuantilesMatchFormerSpectralDefinition" time="0.04955"/>
+    <testcase classname="ObjectiveGpTsTest" name="testSpectralDrawFieldsAndValuesAreFinite" time="0.008063"/>
+    <testcase classname="ObjectiveGpTsTest" name="testPhysicalInputBoundsAreHonored" time="0.061547"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="SolverIntegrationTest" skipped="0" tests="13" time="1.7166">
-    <testcase classname="SolverIntegrationTest" name="testTinyCossinRunCompletesRequestedBudget" time="0.6726"/>
-    <testcase classname="SolverIntegrationTest" name="testTinyCossinRunStaysWithinBounds" time="0.011355"/>
-    <testcase classname="SolverIntegrationTest" name="testTinyCossinRunDoesNotRepeatDesigns" time="0.0033602"/>
-    <testcase classname="SolverIntegrationTest" name="testAllInfeasibleBnhUsesPhaseOneFallback" time="0.11986"/>
-    <testcase classname="SolverIntegrationTest" name="testAllInfeasibleBnhStillCompletesEvaluation" time="0.003534"/>
-    <testcase classname="SolverIntegrationTest" name="testRepeatedInfeasibleObservationsRemainInPhaseOne" time="0.12767"/>
-    <testcase classname="SolverIntegrationTest" name="testUnconstrainedRunRetainsObjectiveTsPath" time="0.17135"/>
-    <testcase classname="SolverIntegrationTest" name="testSequentialAutoRejectsAmbiguousNumericLabels" time="0.18554"/>
-    <testcase classname="SolverIntegrationTest" name="testSequentialExplicitBinaryEncodingsAreHonored" time="0.17669"/>
-    <testcase classname="SolverIntegrationTest" name="testStoredSampledHviAndAcquisitionReconstruct" time="0.015493"/>
-    <testcase classname="SolverIntegrationTest" name="testFeasibleRunScoresBothCompletePools" time="0.0030815"/>
-    <testcase classname="SolverIntegrationTest" name="testSelectedPointIsGlobalCompletePoolMaximum" time="0.0046101"/>
-    <testcase classname="SolverIntegrationTest" name="testTenDimensionalCf1RunIsLabelConsistent" time="0.22141"/>
+  <testsuite errors="0" failures="0" name="PrimaryGaTest" skipped="0" tests="5" time="1.5562">
+    <testcase classname="PrimaryGaTest" name="testGaDoesNotUnderperformItsSeedPool" time="1.146"/>
+    <testcase classname="PrimaryGaTest" name="testGaReportsCompletedSearch" time="0.12131"/>
+    <testcase classname="PrimaryGaTest" name="testGaIsDeterministic" time="0.10469"/>
+    <testcase classname="PrimaryGaTest" name="testGaRestoresCallerRandomStream" time="0.12533"/>
+    <testcase classname="PrimaryGaTest" name="testExplicitPoolAblationReturnsSeedMaximum" time="0.058807"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" name="SolverIntegrationTest" skipped="0" tests="14" time="2.6545">
+    <testcase classname="SolverIntegrationTest" name="testTinyCossinRunCompletesRequestedBudget" time="0.92452"/>
+    <testcase classname="SolverIntegrationTest" name="testTinyCossinRunStaysWithinBounds" time="0.014357"/>
+    <testcase classname="SolverIntegrationTest" name="testTinyCossinRunDoesNotRepeatDesigns" time="0.0046355"/>
+    <testcase classname="SolverIntegrationTest" name="testAllInfeasibleBnhUsesPhaseOneFallback" time="0.15138"/>
+    <testcase classname="SolverIntegrationTest" name="testAllInfeasibleBnhStillCompletesEvaluation" time="0.0032754"/>
+    <testcase classname="SolverIntegrationTest" name="testRepeatedInfeasibleObservationsRemainInPhaseOne" time="0.15416"/>
+    <testcase classname="SolverIntegrationTest" name="testUnconstrainedRunRetainsObjectiveTsPath" time="0.31527"/>
+    <testcase classname="SolverIntegrationTest" name="testSequentialAutoRejectsAmbiguousNumericLabels" time="0.25455"/>
+    <testcase classname="SolverIntegrationTest" name="testSequentialExplicitBinaryEncodingsAreHonored" time="0.32351"/>
+    <testcase classname="SolverIntegrationTest" name="testStoredSampledHviAndAcquisitionReconstruct" time="0.02154"/>
+    <testcase classname="SolverIntegrationTest" name="testFeasibleRunUsesGaPrimaryAndLhsChallenger" time="0.030585"/>
+    <testcase classname="SolverIntegrationTest" name="testPoolAblationRecordsConsistentPrimaryDiagnostics" time="0.13126"/>
+    <testcase classname="SolverIntegrationTest" name="testSelectedPointIsGlobalCompletePoolMaximum" time="0.0075664"/>
+    <testcase classname="SolverIntegrationTest" name="testTenDimensionalCf1RunIsLabelConsistent" time="0.31793"/>
   </testsuite>
 </testsuites>

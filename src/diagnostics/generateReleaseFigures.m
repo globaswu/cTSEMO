@@ -1,10 +1,8 @@
 function manifest = generateReleaseFigures(options)
-%GENERATERELEASEFIGURES Generate the cTSEMO v0.1.0 paper evidence package.
-%   MANIFEST = GENERATERELEASEFIGURES() reads the explicit shipped-profile
-%   source manifest, creates headless publication figures, and writes
-%   source/metric tables for chapter 3 version 4. Existing competitor
-%   fronts are used only in an explicitly unmatched, unequal-information
-%   welded-beam pilot overlay.
+%GENERATERELEASEFIGURES Generate figures from a compatible v0.1 campaign.
+%   MANIFEST = GENERATERELEASEFIGURES(CampaignRoot=PATH) reads the archived
+%   campaign_sources.csv schema and writes its legacy diagnostic package.
+%   Current manuscript figures use the entry points in docs/RESULTS_MAP.md.
 %
 %   The default welded-beam raster is exactly 50^4 cell-centered points.
 %   Lower resolution is never substituted silently. Set RunWbRaster=false
@@ -378,9 +376,9 @@ end
 
 function options = resolvePaths(options, releaseRoot)
     if options.CampaignRoot == ""
-        options.CampaignRoot = fullfile(releaseRoot, ...
-            "benchmark-results", ...
-            "release_shipped_profile_diagnostics_20260724");
+        error("cTSEMO:Diagnostics:CampaignRootRequired", ...
+            ["CampaignRoot is required for the archived v0.1 schema. " ...
+             "See docs/RESULTS_MAP.md for current manuscript figures."]);
     end
     if options.FigureDirectory == ""
         options.FigureDirectory = fullfile( ...

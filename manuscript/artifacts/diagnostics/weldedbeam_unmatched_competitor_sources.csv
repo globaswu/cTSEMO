@@ -1,6 +1,0 @@
-Solver,Group,EvaluationBudget,Source,InformationStatus,ComparisonStatus,SourcePathRoot
-BoTorch (150),Competitor,150,@COMPETITOR_SUMMARY_DIR@/../competitors/botorch/testprob/native_results/botorch_native_welded_20260701_093401/pareto_front.csv,continuous per-constraint margins,unmatched exploratory overlay; no ranking,@COMPETITOR_SUMMARY_DIR@
-Trieste (150),Competitor,150,@COMPETITOR_SUMMARY_DIR@/../competitors/trieste/testprob/native_results/trieste_native_welded_20260701_111913/pareto_front.csv,continuous per-constraint margins,unmatched exploratory overlay; no ranking,@COMPETITOR_SUMMARY_DIR@
-USeMOC (150),Competitor,150,@COMPETITOR_SUMMARY_DIR@/../competitors/usemoc/testprob/native_results/usemoc_native_welded_20260701_085416/pareto_front.csv,continuous per-constraint margins,unmatched exploratory overlay; no ranking,@COMPETITOR_SUMMARY_DIR@
-COMBOO (150),Competitor,150,@COMPETITOR_SUMMARY_DIR@/../competitors/comboo/testprob/native_results/comboo_native_welded_20260701_115105/pareto_front.csv,continuous per-constraint margins,unmatched exploratory overlay; no ranking,@COMPETITOR_SUMMARY_DIR@
-PAC-MOO (150),Competitor,150,@COMPETITOR_SUMMARY_DIR@/../competitors/pac-moo/testprob/native_results/pacmoo_native_welded_20260701_090625/pareto_front.csv,continuous per-constraint margins,unmatched exploratory overlay; no ranking,@COMPETITOR_SUMMARY_DIR@

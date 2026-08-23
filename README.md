@@ -1,100 +1,104 @@
-# cTSEMO MATLAB companion repository
+# cTSEMO
 
-This repository collects the MATLAB source used for the cTSEMO algorithm,
-its benchmark and diagnostic utilities, and the manuscript-specific
-feasibility-field figures. It is organized for retrieval by readers: source
-file and directory names describe their purpose and do not contain
-development timestamps.
+cTSEMO is a MATLAB implementation of sequential, constrained,
+two-objective Bayesian optimization when every evaluation returns two finite
+objective values and one aggregate feasible-or-violating label. It extends the
+TSEMO workflow with a clipped Gaussian-process-mean feasibility score, bounded
+genetic-algorithm acquisition search, an independent same-acquisition
+challenger, anti-clustering masks, and explicit discovery and recovery states.
 
-The repository is a clean copy. The dated development folders, intermediate
-experiments, and run snapshots remain in the private working archive and are
-not required to navigate this version.
+This is the standalone code and numerical-reproduction repository for the
+cTSEMO manuscript. It contains no files from the author's main thesis or the
+lattice-wing paper repository.
 
 ## Quick start
 
-Open MATLAB in this repository and run:
+Clone the repository, open MATLAB in its root directory, and run:
 
 ```matlab
-setup_ctsemo
-```
+setup_ctsemo;
 
-The public optimization interface is:
-
-```matlab
 options = cTSEMOOptions();
 result = cTSEMO(f, g, X0, Y0, C0, lb, ub, options);
 ```
 
-For an ordinary iteration with at least one feasible observation, the default
-candidate-search workflow is:
-
-1. generate a deterministic Latin-hypercube primary seed set, augmented by
-   eligible hyperrectangle corners;
-2. maximize the scalar cTSEMO acquisition over the bounded normalized domain
-   with a genetic algorithm initialized from the best primary seeds;
-3. score an independently seeded Latin-hypercube challenger with exactly the
-   same Thompson draw, PoF, masks, and fixed acquisition background; and
-4. select the higher-scoring nonduplicate point from the GA primary proposal
-   and the challenger.
-
-Feasibility-discovery and low-acquisition recovery remain separate from this
-ordinary primary--challenger arbitration.
-
-To reproduce the Introduction feasibility-field figures:
+The inputs are documented in [`docs/ALGORITHM.md`](docs/ALGORITHM.md). A short
+integration run using a packaged benchmark is:
 
 ```matlab
-run_introduction_pof_comparison
+setup_ctsemo;
+smoke = runSmokeBenchmarks("COSSIN1");
+assert(strcmp(smoke.Status, "passed"));
 ```
 
-The generated figures, metrics, and summary are written to
-`manuscript/introduction_pof_comparison/output/`.
-
-To run the source tests:
+Run the full regression suite with:
 
 ```matlab
 results = run_repository_tests;
+assertSuccess(results);
 ```
 
-## Repository structure
+Maintainers can refresh the committed JUnit and human-readable evidence with
+`run_release_tests`.
 
-| Path | Contents |
+## Reproduce the manuscript results
+
+Three levels are supported:
+
+1. **Audit the published values without rerunning optimization.** Compact
+   CSV, JSON, MAT, and PDF records are under `manuscript/artifacts/`.
+2. **Regenerate plots from retained run records.** The required MATLAB and
+   Python commands are listed in [`docs/REPRODUCING.md`](docs/REPRODUCING.md).
+3. **Rerun the optimization campaigns.** Fixed seeds, budgets, benchmark
+   definitions, solver settings, and validation commands are included in the
+   study scripts.
+
+[`docs/RESULTS_MAP.md`](docs/RESULTS_MAP.md) maps every numerical manuscript
+figure and table to its source data and generating program. The repository
+retains the 35 higher-dimensional optimization trajectories, the COSSIN2
+full-iteration record needed for acquisition decomposition, and compact
+field/selection summaries. Large deterministic probe arrays and obsolete
+finite-pool comparisons are omitted because the supplied scripts regenerate
+them.
+
+## Repository layout
+
+| Path | Purpose |
 |---|---|
-| `src/` | cTSEMO public interface, implementation, benchmarks, diagnostics, examples, and tests |
-| `src/+ctsemo/` | Core package functions |
-| `manuscript/introduction_pof_comparison/` | Code for the comparative PoF atlas and proposed-method comparison |
-| `studies/dimension_matched_pof/` | Matched-dimension feasibility-field campaign and plotting utilities |
-| `CODE_INDEX.md` | Manuscript and algorithm component-to-file index |
+| `src/` | Public solver, core package, benchmarks, diagnostics, examples, and tests |
+| `studies/` | Executable Introduction, two-dimensional, dimensional, and hull studies |
+| `manuscript/artifacts/` | Curated numerical authority for the reported results |
+| `manuscript/paper/main.tex` | Manuscript source linked directly to the curated figures |
+| `docs/` | Algorithm, environment, reproduction, and result-provenance guides |
+| `AGENTS.md` | Operating instructions for coding agents working in this repository |
 
-## MATLAB environment
+The parent research workspace is intentionally excluded. Public source paths
+are repository-relative and reader-facing directory names contain no run
+timestamps. Original run identifiers remain inside manifests where they are
+part of the provenance record.
 
-The recorded development and verification environment is MATLAB R2025b. The
-minimum compatible MATLAB release was not established. The Introduction
-comparison uses Statistics and Machine Learning Toolbox functions including
-`lhsdesign`, `fitcsvm`, `fitPosterior`, `fitcensemble`, and `fitcnet`.
-The default primary acquisition search additionally requires Global
-Optimization Toolbox for `ga`. A finite primary-pool mode is retained as an
-explicit ablation or declared GA-failure policy; it is not the default.
+## Verified environment
 
-Run the bundled tests in the local MATLAB environment before relying on new
-results.
+The release was verified with MATLAB R2025b Update 5. The ordinary default
+GA-primary path requires Optimization Toolbox and Global Optimization
+Toolbox. The Introduction PoF comparison additionally requires Statistics and
+Machine Learning Toolbox. Optional Python figure post-processing was verified
+with the versions recorded in [`requirements-lock.txt`](requirements-lock.txt).
+The minimum compatible MATLAB release has not been established.
 
-## Naming and provenance
+## Scientific scope
 
-Development timestamps were removed from source file and directory names in
-this reader copy. Fixed random seeds are retained inside scripts because they
-are part of the reproducibility record. Newly generated run directories may
-contain run identifiers or creation times so that independent campaigns do
-not overwrite one another.
+The field denoted by `p_i` is an operational feasibility score derived from
+aggregate binary labels. It is not presented as a calibrated Bernoulli
+posterior. The retained campaigns support implementation and diagnostic
+claims under the reported seeds and budgets; they do not establish global
+optimality or superiority over external constrained optimizers.
 
-The conventional constraint-wise Gaussian-process product in the
-Introduction comparison receives continuous constraint margins. All other
-fitted fields in that comparison receive only the common aggregate binary
-labels. The resulting visual comparison is therefore diagnostic and is not a
-matched optimizer ranking.
+## Citation, license, and provenance
 
-## Citation and license
-
-Software citation metadata are provided in `CITATION.cff`. New cTSEMO source
-is distributed under the BSD 2-Clause License. The provenance copy of the
-Bradford TSEMO source retains its own notice under
-`src/vendor/bradford-tsemo/`.
+Citation metadata are in [`CITATION.cff`](CITATION.cff). Repository-authored
+code, scripts, documentation, and retained numerical records are released
+under the BSD 2-Clause License unless a file states otherwise. Bradford TSEMO
+provenance, benchmark sources, and third-party notices are documented in
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and
+[`NOTICE.md`](NOTICE.md).

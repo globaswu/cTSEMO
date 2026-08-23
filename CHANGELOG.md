@@ -2,7 +2,18 @@
 
 All notable changes to cTSEMO are documented in this file.
 
-## [0.2.0] - 2026-08-09
+## [0.2.0] - 2026-08-24
+
+### Public reproduction release
+
+- Curated the final manuscript evidence into stable, timestamp-free reader
+  paths and excluded provisional, duplicate, and dense regenerable outputs.
+- Added the current two-dimensional, GA-primary/challenger, matched-dimension,
+  and hull-coverage reproduction workflows.
+- Added a manuscript-to-artifact map, AI-agent instructions, environment
+  record, SHA-256 artifact index, and clean-clone validation commands.
+- Restored public benchmark provenance, corrected citation and licensing
+  metadata, and removed workstation-path assumptions from reader workflows.
 
 ### Changed
 

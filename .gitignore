@@ -5,15 +5,48 @@
 slprj/
 codegen/
 
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex*
+
 # Generated optimization and test outputs
+ctsemo-output/
+**/ctsemo-output/
 src/ctsemo-output/
 src/benchmark-results/
 src/diagnostic-artifacts/
 src/tests/ctsemo-output/
+src/benchmarks/results/
+src/benchmarks/sensitivity-results/
 studies/**/results/
+tmp/
+
+# Regenerable manuscript intermediates
+manuscript/artifacts/two_dimensional_campaign/grids/
+manuscript/artifacts/two_dimensional_campaign/figure_manifest.csv
+manuscript/artifacts/two_dimensional_campaign/figures/cossin_pof_learning_maps.pdf
+manuscript/artifacts/two_dimensional_campaign/figures/final_classification_error_maps.pdf
+manuscript/artifacts/two_dimensional_campaign/figures/final_prediction_truth_maps.pdf
+manuscript/artifacts/**/figures/*.png
+!manuscript/artifacts/two_dimensional_campaign/figures/classification_error_maps_source.png
+manuscript/artifacts/ga_primary_dimension/ga_primary_highdim_*.png
+manuscript/artifacts/ga_primary_dimension/ga_primary_highdim_*.pdf
+manuscript/artifacts/hull_coverage/dimension_hull_coverage.png
+manuscript/paper/main.pdf
 
 # Large regenerable MATLAB workspace from the Introduction comparison
 manuscript/introduction_pof_comparison/output/*.mat
+manuscript/introduction_pof_comparison/output/*.png
 
 # Operating-system metadata
 Thumbs.db
