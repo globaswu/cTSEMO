@@ -1,0 +1,14 @@
+name: Verify public release
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  integrity:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Verify manifest and release hygiene
+        shell: pwsh
+        run: ./tools/verify_public_release.ps1

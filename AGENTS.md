@@ -48,3 +48,11 @@ assertSuccess(results);
 Also run one short GA-primary smoke case, inspect `git diff --cached`, scan for
 absolute paths and credentials, and verify that no file exceeds GitHub's
 ordinary file-size limit. Do not launch a full campaign unless the user asks.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\verify_public_release.ps1
+```
+
+The PowerShell check covers text and manifest integrity. The MATLAB
+`ThesisArtifactTest` additionally loads retained MAT records and recursively
+checks their string fields for private machine paths.

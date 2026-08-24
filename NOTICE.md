@@ -2,6 +2,9 @@
 
 cTSEMO version 0.2.0 is a research release for sequential constrained
 two-objective Bayesian optimization with aggregate binary feasibility labels.
+Repository tag `v0.2.1` preserves that algorithm and adds sanitized retained
+records plus thesis-specific reproduction interfaces; it does not redefine the
+optimization method.
 
 The implementation is a derivative extension of the MATLAB TSEMO algorithm by
 Eric Bradford, Artur M. Schweidtmann, and Alexei Lapkin. The original

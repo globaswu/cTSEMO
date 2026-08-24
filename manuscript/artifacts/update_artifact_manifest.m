@@ -81,6 +81,10 @@ elseif contains(relativePath, "/ga_primary_challenger/")
     category = "ga_primary_challenger";
 elseif contains(relativePath, "/two_dimensional_campaign/")
     category = "two_dimensional";
+elseif contains(relativePath, "/finite_primary_ablation/")
+    category = "finite_primary_ablation";
+elseif contains(relativePath, "/wb150_thesis/")
+    category = "wb150_thesis";
 elseif contains(relativePath, "/ga_primary_dimension/")
     category = "ga_primary_dimension";
 elseif contains(relativePath, "/hull_coverage/")
@@ -141,6 +145,31 @@ switch fileName
             "ga_primary_highdim_per_run.csv"}
         status = "cited";
         reference = "Table 8 and Section 6.2";
+    case {"selection_state_per_run.csv", "selection_state_totals.csv"}
+        status = "cited";
+        reference = "Thesis Chapter 3 higher-dimensional selection states";
+    case {"problem_ga_vs_finite_pool_pf_comparison.csv", ...
+            "paired_ga_vs_finite_pool_pf_comparison.csv"}
+        status = "cited";
+        reference = "Thesis Table 3.6";
+    case {"wb150_selected_iteration.csv", ...
+            "ctsemo_wb150_hvi_profiles.csv", ...
+            "ctsemo_wb150_hvi_pairwise.csv", ...
+            "ctsemo_wb150_hvi_reconstruction_validation.csv", ...
+            "ctsemo_wb150_hvi_conditional_x1.csv", ...
+            "ctsemo_wb150_hvi_conditional_x2.csv", ...
+            "ctsemo_wb150_hvi_conditional_x3.csv", ...
+            "ctsemo_wb150_hvi_conditional_x4.csv"}
+        status = "cited";
+        reference = "Thesis Section 3.8 and Figures 3.8-3.12";
+    case {"ctsemo_wb150_hvi_profiles.pdf", ...
+            "ctsemo_wb150_hvi_pairwise.pdf", ...
+            "ctsemo_wb150_hvi_conditional_x1.pdf", ...
+            "ctsemo_wb150_hvi_conditional_x2.pdf", ...
+            "ctsemo_wb150_hvi_conditional_x3.pdf", ...
+            "ctsemo_wb150_hvi_conditional_x4.pdf"}
+        status = "cited";
+        reference = "Thesis Figures 3.8-3.12";
     case "hypervolume_histories.pdf"
         status = "cited";
         reference = "Figures 11-12";
@@ -176,6 +205,12 @@ elseif contains(relativePath, "/ga_primary_dimension/")
         generator = ...
             "manuscript/artifacts/ga_primary_dimension/reproduce_highdimensional_results.m";
     end
+elseif contains(relativePath, "/finite_primary_ablation/")
+    generator = ...
+        "manuscript/artifacts/finite_primary_ablation/reproduce_finite_primary_ablation.m";
+elseif contains(relativePath, "/wb150_thesis/")
+    generator = ...
+        "manuscript/artifacts/wb150_thesis/generate_wb150_thesis_artifacts.m";
 elseif contains(relativePath, "/hull_coverage/")
     generator = "studies/hull_coverage/plot_dimension_hull_coverage.py";
 elseif contains(relativePath, "/tests/")

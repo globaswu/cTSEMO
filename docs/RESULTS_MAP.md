@@ -21,3 +21,13 @@ Tables describing equations, defaults, and benchmark definitions are sourced
 directly from `src/+ctsemo/`, `src/cTSEMOOptions.m`, and
 `src/benchmarks/getBenchmarkProblem.m`; they are not independent numerical
 experiments.
+
+## Doctoral-thesis Chapter 3 extensions
+
+| Thesis material | Numerical authority | Reproduction route |
+|---|---|---|
+| Matched GA-primary versus finite-primary ablation (Table 3.6) | `manuscript/artifacts/finite_primary_ablation/problem_ga_vs_finite_pool_pf_comparison.csv`, paired table, 5,250-row evaluation export, seeds, and options | `finite_primary_ablation/reproduce_finite_primary_ablation.m` |
+| Higher-dimensional discovery and recovery counts | `manuscript/artifacts/ga_primary_dimension/selection_state_per_run.csv`, `selection_state_totals.csv` | generated from the 35 retained GA-primary result records |
+| WB150 final selected iteration | `manuscript/artifacts/wb150_thesis/data/wb150_selected_iteration.csv` | `wb150_thesis/generate_wb150_thesis_artifacts.m` |
+| WB150 conditional and pairwise sampled-HVI figures | retained CSV/PDF files under `manuscript/artifacts/wb150_thesis/` | same WB150 generator and sanitized `WELDEDBEAM_rep02/result.mat` |
+| WB150 130-step Pareto evolution | sanitized `WELDEDBEAM_rep02/result.mat` | same generator; outputs 130 A4 frame PDFs under `generated/` |

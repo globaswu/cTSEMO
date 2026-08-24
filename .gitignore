@@ -20,6 +20,7 @@ venv/
 *.synctex*
 
 # Generated optimization and test outputs
+generated/
 ctsemo-output/
 **/ctsemo-output/
 src/ctsemo-output/

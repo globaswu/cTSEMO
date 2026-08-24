@@ -1,0 +1,2 @@
+Replicate,Iteration,EvaluationIndex,X1,X2,X3,X4,SampledHVI,FeasibilityScore,Acquisition,CandidateSource,Origin,ObservedFeasible
+2,130,150,0.12504180723828,2.16528657134987,8.1319159482653,2.26544004125204,7.80430295740616,0.858606505638711,6.791493144727,primary,ga,0

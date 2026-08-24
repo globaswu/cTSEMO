@@ -8,6 +8,8 @@ reconstruct results reported in the cTSEMO manuscript.
 | `ga_primary_challenger/` | Five-case ordinary-selection and GA-search audit |
 | `two_dimensional_campaign/` | Four complete 2-D trajectories, PoF fields, metrics, and figures |
 | `ga_primary_dimension/` | Thirty-five complete higher-dimensional trajectories and compact field metrics |
+| `finite_primary_ablation/` | Thirty-five path-free finite-primary trajectories and the matched thesis comparison |
+| `wb150_thesis/` | Thesis-specific WB150 HVI reductions, figures, and portable generator |
 | `hull_coverage/` | Convex-hull diagnostic figure |
 | `tests/` | Human- and machine-readable regression-test evidence |
 
@@ -22,12 +24,13 @@ generator after changing any retained artifact.
 Campaign-local `source_manifest` and `release_source_manifest` files are
 historical checksums of the execution-time source tree. They may list
 packaging, diagnostic, or dense-output files omitted from this compact public
-release and are not a substitute for the current Git tag. Use the `v0.2.0`
+release and are not a substitute for the current Git tag. Use the `v0.2.1`
 tag for the released source and `artifact_manifest.csv` for the retained
 public evidence.
 
-Excluded material includes obsolete finite-pool comparisons, provisional
+Excluded material includes raw finite-primary MAT archives, provisional
 campaigns, duplicate image formats, dense deterministic probe arrays,
-intermediate checkpoints, and files containing development-machine paths.
-The exclusions reduce the public repository from roughly 400 MB of working
-artifacts to the compact authority needed by readers.
+intermediate checkpoints, and files containing development-machine paths. The
+finite-primary evaluated rows needed for the thesis reduction are retained in
+path-free CSV form. The exclusions reduce the research workspace to the
+compact authority needed by readers.

@@ -11,10 +11,10 @@ authors:
   - family-names: Wu
     given-names: Sen
     email: globas.wu@gmail.com
-version: 0.2.0
+version: 0.2.1
 date-released: 2026-08-24
 repository-code: https://github.com/globaswu/cTSEMO
-url: https://github.com/globaswu/cTSEMO
+url: https://github.com/globaswu/cTSEMO/releases/tag/v0.2.1
 license: BSD-2-Clause
 keywords:
   - Bayesian optimization

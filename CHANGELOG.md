@@ -2,6 +2,24 @@
 
 All notable changes to cTSEMO are documented in this file.
 
+## [0.2.1] - 2026-08-24
+
+### Thesis reproduction and release hygiene
+
+- Replaced workstation paths inside all 35 retained higher-dimensional MAT
+  records with repository-relative runtime metadata; the numerical arrays and
+  optimization histories are unchanged.
+- Added MATLAB release-hygiene tests that recursively inspect retained MAT
+  content rather than relying on binary text scans.
+- Added the path-free 35-run finite-primary evaluation export and a public
+  recomputation of the thesis matched-ablation table.
+- Added per-run discovery/recovery summaries and the thesis-specific WB150
+  conditional, pairwise, selected-iteration, and A4 Pareto-frame workflow.
+- Added reciprocal links to the tagged thesis reproducibility package.
+
+The optimization algorithm remains the source-sealed cTSEMO 0.2.0 method;
+this patch changes packaging, retained evidence, and reproduction interfaces.
+
 ## [0.2.0] - 2026-08-24
 
 ### Public reproduction release

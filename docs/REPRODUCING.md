@@ -108,7 +108,35 @@ The matched-dimension command performs 35 trajectories of 150 evaluations and
 is the longest supplied workflow. Run it only when a full independent rerun is
 intended.
 
-## 4. Verify the evidence index
+## 4. Reproduce the thesis Chapter 3 extensions
+
+### Matched GA-primary versus finite-primary table
+
+```matlab
+setup_ctsemo;
+run(fullfile("manuscript", "artifacts", "finite_primary_ablation", ...
+    "reproduce_finite_primary_ablation.m"));
+```
+
+This command recomputes the paired 35-run reductions from the path-free
+finite-primary evaluation export and the sanitized retained GA-primary MAT
+records. It verifies the reconstructed tables against the committed thesis
+authorities and writes derived outputs under `generated/finite_primary_ablation/`.
+
+### WB150 final-HVI and Pareto evolution
+
+```matlab
+setup_ctsemo;
+addpath(fullfile("manuscript", "artifacts", "wb150_thesis"));
+outputs = generate_wb150_thesis_artifacts;
+```
+
+This command reconstructs the archived iteration-130 Thompson draw, four
+conditional reductions, six pairwise slices, and the selected-iteration row.
+It also writes 130 individual A4 Pareto frames; `page_130.pdf` is the final
+frame used by the thesis. Outputs are written only under `generated/`.
+
+## 5. Verify the evidence index
 
 ```matlab
 setup_ctsemo;

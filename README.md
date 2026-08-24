@@ -8,8 +8,14 @@ genetic-algorithm acquisition search, an independent same-acquisition
 challenger, anti-clustering masks, and explicit discovery and recovery states.
 
 This is the standalone code and numerical-reproduction repository for the
-cTSEMO manuscript. It contains no files from the author's main thesis or the
-lattice-wing paper repository.
+cTSEMO manuscript and the analytical evidence used in Chapter 3 of the
+author's doctoral thesis. It does not contain the thesis document or the
+lattice-wing simulation workspace.
+
+- Release: `v0.2.1` (the cTSEMO 0.2.0 algorithm with publication-hygiene and
+  thesis-evidence additions)
+- Thesis companion release:
+  <https://github.com/globaswu/aeroverify-thesis-artifacts/releases/tag/thesis-v1.0.2>
 
 ## Quick start
 
@@ -57,9 +63,10 @@ Three levels are supported:
 figure and table to its source data and generating program. The repository
 retains the 35 higher-dimensional optimization trajectories, the COSSIN2
 full-iteration record needed for acquisition decomposition, and compact
-field/selection summaries. Large deterministic probe arrays and obsolete
-finite-pool comparisons are omitted because the supplied scripts regenerate
-them.
+field/selection summaries. It also retains a path-free 35-run finite-primary
+export for the matched ablation and a repository-relative WB150 thesis
+reconstruction. Large deterministic probe arrays, raw private-path archives,
+and regenerable workspaces remain omitted.
 
 ## Repository layout
 
@@ -68,6 +75,8 @@ them.
 | `src/` | Public solver, core package, benchmarks, diagnostics, examples, and tests |
 | `studies/` | Executable Introduction, two-dimensional, dimensional, and hull studies |
 | `manuscript/artifacts/` | Curated numerical authority for the reported results |
+| `manuscript/artifacts/finite_primary_ablation/` | Path-free Table 3.6 comparison records and recomputation |
+| `manuscript/artifacts/wb150_thesis/` | Thesis-specific final-HVI and Pareto-evolution reconstruction |
 | `manuscript/paper/main.tex` | Manuscript source linked directly to the curated figures |
 | `docs/` | Algorithm, environment, reproduction, and result-provenance guides |
 | `AGENTS.md` | Operating instructions for coding agents working in this repository |
